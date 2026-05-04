@@ -62,9 +62,9 @@ const FloorPlan = () => {
   const [activeTab, setActiveTab] = useState("1 BHK");
 
   return (
-    <section className="py-20 bg-white" id="floorplan">
+    <section className="pb-20 pt-10 bg-white" id="floorplan">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-center mb-12">Floor Plan</h2>
+        <h2 className="text-4xl md:text-5xl text-black font-black text-black mb-4 text-center">Floor Plan</h2>
         
         <ul className="floorplan-tab-header mb-12">
           {Object.keys(floorPlanData).map((tab) => (

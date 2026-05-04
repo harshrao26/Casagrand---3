@@ -27,7 +27,7 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-4xl md:text-6xl text-black font-extrabold text-black mb-4"
+            className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ const Gallery = () => {
                     alt={item.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent o pacity-0 group-hover:opac ity-100 transition-opacity duration-300 flex items-end p-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent  transition-opacity duration-300 flex items-end p-8">
                     <p className="text-white text-sm font-bold">{item.title}</p>
                   </div>
                 </div>
@@ -83,17 +83,17 @@ const Gallery = () => {
       <style jsx global>{`
         .gallerySwiper .swiper-button-next,
         .gallerySwiper .swiper-button-prev {
-          color: #f59e0b !important;
+          color: #ffffffff !important;
           background: rgba(255, 255, 255, 0.1);
-          width: 60px;
-          height: 60px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .gallerySwiper .swiper-button-next:after,
         .gallerySwiper .swiper-button-prev:after {
-          font-size: 24px;
+          font-size: 16px;
           font-weight: bold;
         }
       `}</style>

@@ -15,11 +15,11 @@ const Location = () => {
   ];
 
   return (
-    <section className="py-24 bg-zinc-50" id="location">
+    <section className="py-24" id="location">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-center mb-16">Vibrant Living, Nearby Essentials</h2>
+        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-16">Elite <span className="text-amber-500">Nearby Essentials</span></h2>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-1 gap-12 items-start">
           {/* Map Side */}
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[500px] relative">
             <iframe 
@@ -35,11 +35,11 @@ const Location = () => {
           </div>
 
           {/* List Side */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
             {essentials.map((item, index) => (
               <div 
                 key={index} 
-                className="flex items-center p-6 bg-white rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-all group"
+                className="   items-center p-6 bg-white rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-all group"
               >
                 <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 mr-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                   {React.cloneElement(item.icon, { size: 20 })}

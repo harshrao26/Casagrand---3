@@ -8,9 +8,12 @@ const Configuration = () => {
   ];
 
   return (
+<div>
+        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4 text-center">Plot Sizes & Pricing</h2>
+
     <section className="ccd-config-sec text-white py-24" id="configuration">
+
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-white text-center mb-12 uppercase tracking-widest font-bold text-3xl">Plot Sizes & Pricing</h2>
         
         <div className="ccd-config-top mb-12 flex justify-between items-center border-b border-white/10 pb-6">
           <span className="text-xl font-medium">Casagrand Estancia - Oragadam</span>
@@ -39,6 +42,7 @@ const Configuration = () => {
         </div>
       </div>
     </section>
+</div>
   );
 };
 

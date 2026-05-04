@@ -26,15 +26,13 @@ export default function Home() {
                 <Clubhouse />
 
 
-                        <Gallery />
+        <Gallery />
+        <FloorPlan />
 
-
-
-
+        
         <Configuration />
         <Amenities />
         <Videos />
-        <FloorPlan />
         <Location />
         <Contact />
       </main>
