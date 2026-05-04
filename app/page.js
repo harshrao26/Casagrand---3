@@ -18,15 +18,24 @@ export default function Home() {
       <main className="flex-1">
         <Navbar />
         <Hero />
+                <ReviewSection />
+
         <Overview />
+
+
+                <Clubhouse />
+
+
+                        <Gallery />
+
+
+
+
         <Configuration />
         <Amenities />
-        <Clubhouse />
-        <Gallery />
         <Videos />
         <FloorPlan />
         <Location />
-        <ReviewSection />
         <Contact />
       </main>
       <Footer />

@@ -5,13 +5,13 @@ import { MapPin, School, GraduationCap, Hospital, Building2, Store, Plane, Train
 
 const Location = () => {
   const essentials = [
-    { icon: <School />, label: "National Public School Kogilu", dist: "1.5 km" },
-    { icon: <GraduationCap />, label: "Reva University", dist: "3.2 Km" },
-    { icon: <Hospital />, label: "SPARSH Hospital Yelahanka", dist: "4.7 Km" },
-    { icon: <Building2 />, label: "Manyata Tech Park", dist: "3 Km" },
-    { icon: <Store />, label: "RMZ Galleria Mall", dist: "5.7 Km" },
-    { icon: <Plane />, label: "Airport (KIAB)", dist: "20 km" },
-    { icon: <Train />, label: "Upcoming Kogilu Metro", dist: "2.8 km" },
+    { icon: <Building2 />, label: "SIPCOT Industrial Hub", dist: "5 mins" },
+    { icon: <Building2 />, label: "Renault Nissan / Daimler", dist: "10 mins" },
+    { icon: <School />, label: "Sethu Bhaskara School", dist: "12 mins" },
+    { icon: <Hospital />, label: "Jaya Hospital", dist: "15 mins" },
+    { icon: <Store />, label: "Hiranandani Parks", dist: "10 mins" },
+    { icon: <Train />, label: "Vandalur Railway Station", dist: "25 mins" },
+    { icon: <Plane />, label: "Chennai Intl Airport", dist: "45 mins" },
   ];
 
   return (

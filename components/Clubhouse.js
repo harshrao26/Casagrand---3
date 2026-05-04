@@ -1,33 +1,91 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Coffee, Users, Trophy, Sparkles, ArrowRight } from 'lucide-react';
 
 const Clubhouse = () => {
+  const features = [
+    { icon: <Coffee size={20} />, text: "Gourmet Cafe & Lounge" },
+    { icon: <Users size={20} />, text: "Social Gathering Spaces" },
+    { icon: <Trophy size={20} />, text: "Indoor Sports Arena" },
+    { icon: <Sparkles size={20} />, text: "Terrace Garden & Deck" },
+  ];
+
   return (
     <section 
-      className="relative min-h-[60vh] flex items-center py-24 bg-fixed bg-cover bg-center" 
-      style={{ backgroundImage: "url('/assets/clubhouse_banner.webp')" }}
+      className="relative min-h-[80vh] flex items-center py-24 overflow-hidden" 
       id="communities"
     >
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Parallax Background */}
+      <div 
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/clubhouse_banner.webp')" }}
+      />
+      
+      {/* Multi-layered Overlays */}
+      <div className="absolute inset-0 bg-zinc-950/10 z-1" />
+      <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/10 to-transparent z-2" />
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/30 z-2" /> */}
+
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-              Where Community <br />
-              Meets <span className="text-amber-500">Luxury.</span>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          
+          <motion.div 
+            className="lg:w-3/5"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-xl mb-8">
+              <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">The Grand Sanctum</span>
+            </div>
+
+            <h2 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8">
+              22,500 Sq.Ft. <br />
+              of Pure <span className="text-amber-500 italic">Grandeur.</span>
             </h2>
-          </div>
-          <div className="md:w-1/2">
-            <p className="text-zinc-200 text-xl leading-relaxed">
-              Step into a world where luxury meets leisure. A luxurious clubhouse of 22,500 Sft. furnished
-              with indoor and terrace amenities overlooking the grand swimming pool and central podium. 
-              Whether you’re looking to relax, socialize, or celebrate, this grand facility offers the 
-              perfect setting for every occasion.
+
+            <p className="text-zinc-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-medium">
+              Step into a world where luxury meets leisure. Our exquisitely designed clubhouse is the soul of the community, 
+              featuring world-class indoor and terrace amenities that overlook the grand swimming pool and central podium.
             </p>
-          </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+              {features.map((feature, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                  className="flex items-center space-x-4 group cursor-default"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    {feature.icon}
+                  </div>
+                  <span className="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">{feature.text}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <button className="px-10 py-5 bg-white text-zinc-950 rounded-2xl font-black flex items-center space-x-3 hover:bg-amber-500 hover:text-white transition-all duration-500 group shadow-2xl shadow-white/5">
+              <span>EXPLORE ALL AMENITIES</span>
+              <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+            </button>
+          </motion.div>
+ 
+
         </div>
       </div>
+
+      {/* Decorative side accent */}
+      <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-amber-500/5 to-transparent pointer-events-none" />
     </section>
   );
 };
 
 export default Clubhouse;
+

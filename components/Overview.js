@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 
 const Overview = () => {
   const highlights = [
-    "7.32 Acres of Sprawling Community",
-    "B+G+13 Floors Architectural Marvel",
-    "429 Well-Designed Signature Homes",
-    "Contemporary Elevation with Facade Lighting"
+    "Superior Villa Plots in a Gated Community",
+    "Prime Location in Oragadam",
+    "Well-Planned Infrastructure & Roads",
+    "Modern Amenities & Lush Green Spaces"
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden" id="overview">
+    <section className="pb-10 bg-white overflow-hidden" id="overview">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
@@ -25,8 +25,7 @@ const Overview = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl" />
-              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-amber-600 mb-4">The Grand Overview</h2>
+               <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-amber-600 mb-4">The Grand Overview</h2>
               <h3 className="text-4xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-8">
                 A Prestigious Address <br />
                 for the <span className="text-amber-500 text-outline">Privileged Few.</span>
@@ -35,7 +34,7 @@ const Overview = () => {
             
             <div className="space-y-6 text-lg text-zinc-600 leading-relaxed mb-10">
               <p>
-                <span className="font-bold text-zinc-900">Casagrand Estancia</span> offers an exceptional lifestyle in the vibrant locale of Guduvanchery. It's not just a home; it's a statement of your success and taste.
+                <span className="font-bold text-zinc-900">Casagrand Estancia</span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It's the perfect canvas for your dream home.
               </p>
               <p>
                 Our community is an engineering marvel, featuring contemporary elevations uplifted with dramatic facade lighting and beautifully crafted landscapes that soothe the soul.
@@ -69,7 +68,7 @@ const Overview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl">
+            <div className="relative z-10  ">
               <img 
                 src="/assets/intro.webp" 
                 alt="Project Overview" 
@@ -77,9 +76,7 @@ const Overview = () => {
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-amber-500/20 rounded-[40px] -z-0" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-amber-500/5 rounded-full blur-3xl -z-10" />
-          </motion.div>
+                       </motion.div>
 
         </div>
       </div>

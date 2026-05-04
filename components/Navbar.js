@@ -18,7 +18,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-white/90 backdrop-blur-lg shadow-lg py-3'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           
@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Left Menu */}
-          <ul className={`hidden lg:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-white'}`}>
+          <ul className={`hidden lg:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
             <li><a href="#overview" className="hover:text-amber-500 transition-colors">Overview</a></li>
             <li><a href="#communities" className="hover:text-amber-500 transition-colors">Communities</a></li>
             <li><a href="#gallery" className="hover:text-amber-500 transition-colors">Gallery</a></li>
@@ -39,20 +39,20 @@ const Navbar = () => {
             <img 
               src="/assets/cg_logo.png" 
               alt="Casagrand" 
-              className={`h-12 transition-all duration-300 ${scrolled ? 'scale-90 brightness-100' : 'scale-110 brightness-0 invert'}`} 
+              className={`h-12 transition-all duration-300 ${scrolled ? 'scale-90 brightness-100' : ''}`} 
             />
           </div>
 
           {/* Desktop Right Menu */}
           <div className="hidden lg:flex items-center space-x-10">
-            <ul className={`flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-white'}`}>
+            <ul className={`flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
               <li><a href="#floorplan" className="hover:text-amber-500 transition-colors">Floor Plan</a></li>
               <li><a href="#location" className="hover:text-amber-500 transition-colors">Location</a></li>
               <li><a href="#contact-us" className="hover:text-amber-500 transition-colors">Contact</a></li>
             </ul>
             <a 
               href="tel:+911234567890" 
-              className={`flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all ${scrolled ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-white text-zinc-900 hover:bg-amber-500 hover:text-white'}`}
+              className={`flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all ${scrolled ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-amber-600 text-white hover:bg-amber-700'}`}
             >
               <Phone size={16} />
               <span>Call Now</span>
@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button className={`lg:hidden p-2 ${scrolled ? 'text-zinc-900' : 'text-white'}`} onClick={toggleMenu}>
+          <button className="lg:hidden p-2 text-zinc-900" onClick={toggleMenu}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>

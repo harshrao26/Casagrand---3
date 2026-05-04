@@ -2,10 +2,10 @@ import React from 'react';
 
 const ReviewSection = () => {
   return (
-    <section className="g-review relative z-10">
+    <section className="g-review relative px-4 z-10">
       <div className="container mx-auto">
         <div className="logo-review">
-          <div className="promo-card bg-white shadow-lg rounded p-6">
+          <div className="promo-card bg-white shadow-lg rounded p-20">
             <img 
               className="logo img-fluid" 
               src="/assets/Untitled-design-19.png" 

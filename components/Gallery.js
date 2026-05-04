@@ -23,11 +23,11 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-24 bg-zinc-900 overflow-hidden" id="gallery">
+    <section className="md:py-24 py-12  overflow-hidden" id="gallery">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-4xl md:text-6xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-6xl text-black font-extrabold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,15 +63,15 @@ const Gallery = () => {
             className="gallerySwiper !overflow-visible"
           >
             {images.map((item, index) => (
-              <SwiperSlide key={index} className="max-w-[300px] md:max-w-[700px] rounded-[32px] overflow-hidden group shadow-2xl transition-all">
+              <SwiperSlide key={index} className="max-w-[400px] md:max-w-[700px] rounded-[32px] overflow-hidden group shadow-2xl transition-all">
                 <div className="relative aspect-video">
                   <img 
                     src={item.src} 
                     alt={item.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                    <p className="text-white text-2xl font-bold">{item.title}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent o pacity-0 group-hover:opac ity-100 transition-opacity duration-300 flex items-end p-8">
+                    <p className="text-white text-sm font-bold">{item.title}</p>
                   </div>
                 </div>
               </SwiperSlide>

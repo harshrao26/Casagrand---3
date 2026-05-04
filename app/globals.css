@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
+  --font-poppins: var(--font-poppins);
+  --font-outfit: var(--font-outfit);
+  --font-inria: var(--font-inria-serif);
 }
+
 
 :root {
   --background: #ffffff;
@@ -23,13 +26,14 @@ html {
 
 @layer base {
   body {
-    @apply text-sm text-[var(--primarycolor)] font-serif font-normal bg-white;
-    font-family: var(--font-outfit), sans-serif;
+    @apply text-sm text-[var(--primarycolor)] font-normal bg-white;
+    font-family: var(--font-poppins), sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-inria-serif), serif;
+    font-family: var(--font-poppins), sans-serif;
   }
+
 }
 
 .glass {
@@ -75,18 +79,18 @@ html {
 }
 
 .promo-card {
-  max-width: 200px;
-  padding: 60px 20px !important;
+  max-width: 150px;
+  padding: 40px 20px !important;
   position: absolute;
-  top: -88px;
+  top: -60px;
 }
 
 .review-box {
   display: inline;
-  width: 150px;
+  width: 120px;
   right: 0;
   position: absolute;
-  bottom: 0;
+  bottom: 30;
 }
 
 .rhs-image {
