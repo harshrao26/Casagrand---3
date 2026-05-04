@@ -9,14 +9,14 @@ const Configuration = () => {
 
   return (
 <div>
-        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4 text-center">Plot Sizes & Pricing</h2>
+        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-8 text-center">Plot Sizes & <span className="text-amber-500">Pricing</span> </h2>
 
     <section className="ccd-config-sec text-white py-24" id="configuration">
 
       <div className="container mx-auto px-4">
         
         <div className="ccd-config-top mb-12 flex justify-between items-center border-b border-white/10 pb-6">
-          <span className="text-xl font-medium">Casagrand Estancia - Oragadam</span>
+          <span className="text-xl font-medium">Casagrand Casablanca - Oragadam</span>
           <span className="text-2xl font-bold text-amber-500">Starting from ₹ 44 Lacs*</span>
         </div>
 

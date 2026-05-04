@@ -17,7 +17,8 @@
   --whitecolor: #ffffff;
   --goldbg: #202324;
   --goldcolor: #cc9934;
-  --estancia-brown: #C7A386;
+  --casablanca-brown: #C7A386;
+  --cta-color: #FCB33A;
 }
 
 html {
@@ -123,8 +124,8 @@ html {
 }
 
 .download-now-button {
-  background: white;
-  color: #000;
+  background: var(--cta-color);
+  color: #111827;
   border: 1px solid #000;
   border-radius: 50px;
   padding: 10px 20px;
@@ -132,6 +133,17 @@ html {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+}
+
+.cta-button {
+  background-color: var(--cta-color) !important;
+  color: #111827 !important;
+  border-color: var(--cta-color) !important;
+}
+
+.cta-button:hover {
+  background-color: #e5a22f !important;
+  color: #111827 !important;
 }
 
 .floorplan-tab-header {

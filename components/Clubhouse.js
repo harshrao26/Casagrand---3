@@ -3,8 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Coffee, Users, Trophy, Sparkles, ArrowRight } from 'lucide-react';
+import { useLeadForm } from './LeadFormContext';
 
 const Clubhouse = () => {
+  const { openLeadForm } = useLeadForm();
+
   const features = [
     { icon: <Coffee size={20} />, text: "Gourmet Cafe & Lounge" },
     { icon: <Users size={20} />, text: "Social Gathering Spaces" },
@@ -71,7 +74,11 @@ const Clubhouse = () => {
               ))}
             </div>
 
-            <button className="px-10 py-5 bg-white text-zinc-950 rounded-2xl font-black flex items-center space-x-3 hover:bg-amber-500 hover:text-white transition-all duration-500 group shadow-2xl shadow-white/5">
+            <button
+              type="button"
+              onClick={openLeadForm}
+              className="cta-button px-10 py-5 rounded-2xl font-black flex items-center space-x-3 transition-all duration-500 group shadow-2xl shadow-white/5"
+            >
               <span>EXPLORE ALL AMENITIES</span>
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
             </button>
@@ -88,4 +95,3 @@ const Clubhouse = () => {
 };
 
 export default Clubhouse;
-

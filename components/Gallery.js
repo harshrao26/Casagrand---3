@@ -35,7 +35,7 @@ const Gallery = () => {
             A Visual <span className="text-amber-500">Symphony.</span>
           </motion.h2>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Take a glimpse into the life that awaits you at Casagrand Estancia. 
+            Take a glimpse into the life that awaits you at Casagrand Casablanca. 
             Every corner is crafted for perfection.
           </p>
         </div>

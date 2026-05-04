@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import { useLeadForm } from './LeadFormContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { openLeadForm } = useLeadForm();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,10 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const openMobileLeadForm = () => {
+    setIsOpen(false);
+    openLeadForm();
+  };
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-white/90 backdrop-blur-lg shadow-lg py-3'}`}>
@@ -52,7 +58,7 @@ const Navbar = () => {
             </ul>
             <a 
               href="tel:+911234567890" 
-              className={`flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all ${scrolled ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-amber-600 text-white hover:bg-amber-700'}`}
+              className="cta-button flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all"
             >
               <Phone size={16} />
               <span>Call Now</span>
@@ -82,10 +88,14 @@ const Navbar = () => {
             <li><a href="#contact-us" onClick={toggleMenu}>Contact Us</a></li>
           </ul>
           <div className="mt-auto">
-            <a href="tel:+911234567890" className="w-full bg-amber-600 text-white text-center py-5 rounded-2xl font-bold flex items-center justify-center space-x-3">
+            <button
+              type="button"
+              onClick={openMobileLeadForm}
+              className="cta-button w-full text-center py-5 rounded-2xl font-bold flex items-center justify-center space-x-3"
+            >
               <Phone size={24} />
               <span className="text-xl">Book Site Visit</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>

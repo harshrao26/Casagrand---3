@@ -1,6 +1,7 @@
 import { Inria_Serif, Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 import MobileActions from "@/components/MobileActions";
+import { LeadFormProvider } from "@/components/LeadFormContext";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -20,8 +21,8 @@ const inriaSerif = Inria_Serif({
 });
 
 export const metadata = {
-  title: "Casagrand Estancia | Dubai Lifestyle Homes in Kogilu, North Bangalore",
-  description: "Experience the pinnacle of luxury with Casagrand Estancia in Kogilu, North Bangalore. Offering premium 1, 2, 3 & 4 BHK apartments inspired by Dubai's iconic architecture.",
+  title: "Casagrand Casablanca | Dubai Lifestyle Homes in Kogilu, North Bangalore",
+  description: "Experience the pinnacle of luxury with Casagrand Casablanca in Kogilu, North Bangalore. Offering premium 1, 2, 3 & 4 BHK apartments inspired by Dubai's iconic architecture.",
 };
 
 export default function RootLayout({ children }) {
@@ -31,10 +32,11 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${outfit.variable} ${inriaSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-poppins">
-        {children}
-        <MobileActions />
+        <LeadFormProvider>
+          {children}
+          <MobileActions />
+        </LeadFormProvider>
       </body>
     </html>
   );
 }
-

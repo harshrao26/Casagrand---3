@@ -3,8 +3,11 @@
 import React from 'react';
 import { Download, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLeadForm } from './LeadFormContext';
 
 const Overview = () => {
+  const { openLeadForm } = useLeadForm();
+
   const highlights = [
     "Superior Villa Plots in a Gated Community",
     "Prime Location in Oragadam",
@@ -34,7 +37,7 @@ const Overview = () => {
             
             <div className="space-y-6 text-lg text-zinc-600 leading-relaxed mb-10">
               <p>
-                <span className="font-bold text-zinc-900">Casagrand Estancia</span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It's the perfect canvas for your dream home.
+                <span className="font-bold text-zinc-900">Casagrand Casablanca</span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It&apos;s the perfect canvas for your dream home.
               </p>
               <p>
                 Our community is an engineering marvel, featuring contemporary elevations uplifted with dramatic facade lighting and beautifully crafted landscapes that soothe the soul.
@@ -51,7 +54,11 @@ const Overview = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 items-center">
-              <button className="w-full sm:w-auto px-8 py-4 bg-zinc-900 text-white rounded-2xl font-bold flex items-center justify-center space-x-3 hover:bg-amber-600 transition-all shadow-xl shadow-zinc-200">
+              <button
+                type="button"
+                onClick={openLeadForm}
+                className="cta-button w-full sm:w-auto px-8 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 transition-all shadow-xl shadow-zinc-200"
+              >
                 <Download size={20} />
                 <span>Download Brochure</span>
               </button>

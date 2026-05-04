@@ -56,7 +56,7 @@ const ContactForm = () => {
                 </label>
               </div>
               
-              <button className="w-full py-4 bg-[var(--primarycolor)] text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-black transition-colors shadow-lg shadow-black/20">
+              <button className="cta-button w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-black/20">
                 <Send size={18} />
                 Submit
               </button>
