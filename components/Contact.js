@@ -43,7 +43,7 @@ const Contact = () => {
 
           <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl text-zinc-950">
              
-            <h3 className="text-3xl font-extrabold mb-4">Plan a Visit</h3>
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-4">Plan a Visit</h3>
             <p className="text-zinc-500 text-lg mb-10">
               Share your details once and our team will help with brochure, pricing, and site visit scheduling.
             </p>

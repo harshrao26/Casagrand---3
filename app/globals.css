@@ -29,6 +29,7 @@ html {
   body {
     @apply text-sm text-[var(--primarycolor)] font-normal bg-white;
     font-family: var(--font-poppins), sans-serif;
+    padding-bottom: 56px;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -272,9 +273,6 @@ html {
 }
 
 @media (min-width: 769px) {
-  .ccd-mb-footer {
-    display: none;
-  }
   .mobile-logo {
     display: none;
   }
