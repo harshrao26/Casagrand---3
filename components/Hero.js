@@ -6,7 +6,7 @@ import { Download, ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[70vh] md:h-[85vh] w-full overflow-hidden flex items-center pt-20">
+    <section className="relative min-h-[40vh] md:h-[85vh] w-full overflow-hidden flex items-center pt-20">
       {/* Background Image with Parallax-like effect */}
       <div className="absolute inset-0 z-0">
         <div 
