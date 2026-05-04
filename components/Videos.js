@@ -22,7 +22,7 @@ const Videos = () => {
   return (
     <section className="py-12 bg-white" id="videos">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-12">Visual <span className="text-amber-500">Experience</span></h2>
+        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-12">Visual <span className="text-amber-500">Experience</span></h2>
         
         <div className="max-w-4xl mx-auto">
           {/* Tabs */}

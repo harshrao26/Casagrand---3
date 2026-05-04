@@ -46,7 +46,7 @@ const Clubhouse = () => {
               <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">The Grand Sanctum</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-[1.1] mb-8">
+            <h2 className="text-2xl md:text-5xl font-black text-white leading-[1.1] mb-8">
               22,500 Sq.Ft. <br />
               of Pure <span className="text-amber-500 italic">Grandeur.</span>
             </h2>

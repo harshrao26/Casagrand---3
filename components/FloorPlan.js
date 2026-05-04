@@ -64,7 +64,7 @@ const FloorPlan = () => {
   return (
     <section className="pb-20 pt-10 bg-white" id="floorplan">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-4 text-center">Floor <span className="text-amber-500">Plan</span></h2>
+        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center">Floor <span className="text-amber-500">Plan</span></h2>
         
         <ul className="floorplan-tab-header mb-12">
           {Object.keys(floorPlanData).map((tab) => (

@@ -29,7 +29,7 @@ const Overview = () => {
           >
             <div className="relative">
                <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-amber-600 mb-4">The Grand Overview</h2>
-              <h3 className="text-4xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-8">
+              <h3 className="text-2xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-8">
                 A Prestigious Address <br />
                 for the <span className="text-amber-500 text-outline">Privileged Few.</span>
               </h3>

@@ -12,7 +12,7 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+            <h2 className="text-2xl md:text-5xl font-extrabold mb-8 leading-tight">
               Book Your <span className="text-amber-500">Site Visit</span> Now
             </h2>
             <p className="text-zinc-400 text-lg mb-12 max-w-md">

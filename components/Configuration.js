@@ -9,7 +9,7 @@ const Configuration = () => {
 
   return (
 <div>
-        <h2 className="text-4xl md:text-5xl text-black font-extrabold text-black mb-8 text-center">Plot Sizes & <span className="text-amber-500">Pricing</span> </h2>
+        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-8 text-center">Plot Sizes & <span className="text-amber-500">Pricing</span> </h2>
 
     <section className="ccd-config-sec text-white py-24" id="configuration">
 
