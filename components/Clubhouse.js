@@ -69,7 +69,7 @@ const Clubhouse = () => {
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
-                  <span className="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">{feature.text}</span>
+                  <span className="text-white font-bold md:text-lg group-hover:text-amber-400 transition-colors">{feature.text}</span>
                 </motion.div>
               ))}
             </div>

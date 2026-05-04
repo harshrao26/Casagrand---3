@@ -35,7 +35,7 @@ const Overview = () => {
               </h3>
             </div>
             
-            <div className="space-y-6 text-lg text-zinc-600 leading-relaxed mb-10">
+            <div className="space-y-6 md:text-lg text-zinc-600 leading-relaxed mb-10">
               <p>
                 <span className="font-bold text-zinc-900">Casagrand Casablanca </span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It&apos;s the perfect canvas for your dream home.
               </p>
