@@ -26,7 +26,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-zinc-500 text-sm font-bold uppercase tracking-widest">Call Us</p>
-                  <p className="text-xl font-bold">+91 123 456 7890</p>
+                  <p className="text-md md:text-xl font-bold">+91 123 456 7890</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -35,16 +35,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-zinc-500 text-sm font-bold uppercase tracking-widest">Email Us</p>
-                  <p className="text-xl font-bold">info@casagrandcasablanca.com</p>
+                  <p className="text-md md:text-xl font-bold">info@casagrandcasablanca.com</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl text-zinc-950">
-            <div className="w-16 h-16 rounded-2xl bg-[var(--cta-color)]/15 flex items-center justify-center text-zinc-950 mb-8">
-              <CalendarCheck size={30} />
-            </div>
+             
             <h3 className="text-3xl font-extrabold mb-4">Plan a Visit</h3>
             <p className="text-zinc-500 text-lg mb-10">
               Share your details once and our team will help with brochure, pricing, and site visit scheduling.

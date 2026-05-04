@@ -15,9 +15,9 @@ const Configuration = () => {
 
       <div className="container mx-auto px-4">
         
-        <div className="ccd-config-top mb-12 flex justify-between items-center border-b border-white/10 pb-6">
-          <span className="text-xl font-medium">Casagrand Casablanca - Oragadam</span>
-          <span className="text-2xl font-bold text-amber-500">Starting from ₹ 44 Lacs*</span>
+        <div className="ccd-config-top mb-12 flex flex-col md:flex-row justify-between text-center md:text-left items-center border-b border-white/10 pb-6">
+          <span className="md:text-xl text-lg font-medium">Casagrand Casablanca - Oragadam</span>
+          <span className="md:text-2xl text-xl font-bold text-amber-500">Starting from ₹ 44 Lacs*</span>
         </div>
 
         <div className="ccd-config-tabel overflow-x-auto rounded-xl shadow-2xl backdrop-blur-md bg-black/30">

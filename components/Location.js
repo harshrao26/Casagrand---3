@@ -15,9 +15,9 @@ const Location = () => {
   ];
 
   return (
-    <section className="py-24" id="location">
+    <section className="pt-6 md:pt-20" id="location">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-16">Elite <span className="text-amber-500">Nearby Essentials</span></h2>
+        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-8">Elite <span className="text-amber-500">Nearby Essentials</span></h2>
         
         <div className="grid lg:grid-cols-1 gap-12 items-start">
           {/* Map Side */}
