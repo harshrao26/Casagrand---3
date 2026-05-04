@@ -37,7 +37,7 @@ const Overview = () => {
             
             <div className="space-y-6 text-lg text-zinc-600 leading-relaxed mb-10">
               <p>
-                <span className="font-bold text-zinc-900">Casagrand Casablanca</span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It&apos;s the perfect canvas for your dream home.
+                <span className="font-bold text-zinc-900">Casagrand Casablanca </span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It&apos;s the perfect canvas for your dream home.
               </p>
               <p>
                 Our community is an engineering marvel, featuring contemporary elevations uplifted with dramatic facade lighting and beautifully crafted landscapes that soothe the soul.

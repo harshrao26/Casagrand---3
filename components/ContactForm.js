@@ -20,39 +20,39 @@ const ContactForm = () => {
           <div className="lg:w-1/2 w-full">
             <form className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 space-y-6">
               <div className="relative group">
-                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--estancia-brown)] transition-colors" size={20} />
+                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--casablanca-brown)] transition-colors" size={20} />
                 <input 
                   type="text" 
-                  placeholder="Enter Your Name" 
-                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--estancia-brown)] transition-all"
+                  placeholder="Full Name" 
+                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--casablanca-brown)] transition-all"
                   required 
                 />
               </div>
               
               <div className="relative group">
-                <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--estancia-brown)] transition-colors" size={20} />
+                <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--casablanca-brown)] transition-colors" size={20} />
                 <input 
                   type="tel" 
-                  placeholder="Enter Phone Number" 
-                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--estancia-brown)] transition-all"
+                  placeholder="Phone Number" 
+                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--casablanca-brown)] transition-all"
                   required 
                 />
               </div>
               
               <div className="relative group">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--estancia-brown)] transition-colors" size={20} />
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--casablanca-brown)] transition-colors" size={20} />
                 <input 
                   type="email" 
-                  placeholder="Enter Your Email" 
-                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--estancia-brown)] transition-all"
+                  placeholder="Email Address" 
+                  className="w-full pl-12 pr-6 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--casablanca-brown)] transition-all"
                   required 
                 />
               </div>
               
               <div className="flex items-center gap-3 text-left">
-                <input type="checkbox" id="consent" className="w-5 h-5 accent-[var(--estancia-brown)]" defaultChecked />
-                <label htmlFor="consent" className="text-sm text-gray-600">
-                  I agree to the <a href="#" className="text-[var(--estancia-brown)] hover:underline">Privacy Policy</a>.
+                <input type="checkbox" id="consent" className="w-5 h-5 accent-[var(--casablanca-brown)]" defaultChecked />
+                <label htmlFor="consent" className="text-sm text-zinc-500">
+                  I agree to the <a href="#" className="text-[var(--casablanca-brown)] hover:underline">Privacy Policy</a>.
                 </label>
               </div>
               

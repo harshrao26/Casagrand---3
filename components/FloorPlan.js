@@ -89,7 +89,7 @@ const FloorPlan = () => {
               <SwiperSlide key={index}>
                 <div className="flex flex-col md:flex-row items-center gap-12 bg-zinc-50 p-8 rounded-3xl">
                   <div className="md:w-1/2 text-left space-y-6">
-                    <h3 className="text-2xl font-bold text-[var(--estancia-brown)]">{plan.title}</h3>
+                    <h3 className="text-2xl font-bold text-[var(--casablanca-brown)]">{plan.title}</h3>
                     <div className="grid grid-cols-2 gap-8">
                       <div>
                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">TYPE</p>
