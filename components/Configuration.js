@@ -9,7 +9,7 @@ const Configuration = () => {
 
   return (
     <section
-      className="relative py-20 px-4 overflow-hidden bg-[#0c0c0c]"
+      className="relative py-20 mx-auto px-4 overflow-hidden bg-[#0c0c0c]"
       id="configuration"
     >
       {/* Background Blur */}
@@ -30,7 +30,7 @@ const Configuration = () => {
 </div>
 
 {/* Top Card */}
-<div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center mb-6 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
+<div className="backdrop-blur-xl  max-w-7xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center mb-6 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
   
   <div>
     <h3 className="text-lg md:text-xl font-semibold text-white">
@@ -54,7 +54,7 @@ const Configuration = () => {
 </div>
 
 {/* Table */}
-<div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.3)]">
+<div className="overflow-hidden max-w-7xl mx-auto rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.3)]">
   
   <table className="w-full">
     

@@ -11,14 +11,11 @@ import 'swiper/css/effect-coverflow';
 
 const Gallery = () => {
   const images = [
-    { src: "/assets/amenities_2-scaled.webp", title: "Grand Entrance" },
-    { src: "/assets/amenities_3-scaled.webp", title: "Lush Greenery" },
-    { src: "/assets/4-1-1.jpg", title: "Clubhouse Interior" },
-    { src: "/assets/2-1-1.jpg", title: "Swimming Pool" },
-    { src: "/assets/1-1-1.jpg", title: "Kids Play Area" },
-    { src: "/assets/amenities_4-scaled.webp", title: "Gymnasium" },
-    { src: "/assets/amenities_1-scaled.webp", title: "Landscaped Gardens" },
-    { src: "/assets/3-1-1.jpg", title: "Multipurpose Hall" },
+    { src: "/prop/Copy of Aerial Night.webp", title: "Majestic Aerial Night View" },
+    { src: "/prop/Copy of Clubhouse Dusk.webp", title: "Exquisite Clubhouse at Dusk" },
+    { src: "/prop/Copy of Main Entrance.webp", title: "Grand Entrance Portal" },
+    { src: "/prop/Copy of Podium Dusk (1).webp", title: "Serene Evening Podium" },
+    { src: "/prop/Copy of Poduim 1 To Osr.webp", title: "Lush Greenery & Open Spaces" },
   ];
 
   return (

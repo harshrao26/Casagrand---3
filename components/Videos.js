@@ -7,13 +7,13 @@ const Videos = () => {
 
   const tabs = [
     { 
-      title: "Top Reasons to Buy", 
-      embedUrl: "https://www.youtube.com/embed/ABQox8jMetc?si=e3_yQdZNM79PoGbm",
+      title: "Top 6 Reasons to Buy", 
+      videoUrl: "/vid/Copy of Top 6 reasons Casablanca-phase 2.mp4",
       thumb: "/assets/Screenshot-2025-09-22-115220.png"
     },
     { 
-      title: "Walkthrough", 
-      embedUrl: "https://www.youtube.com/embed/LCiA3j8SpW4?si=DJUeuEJmsefrJiYy",
+      title: "Phase 2 Walkthrough", 
+      videoUrl: "/vid/Copy of CG_CASABLANCAPHASE 2-001.mp4",
       thumb: "/assets/sXsl8PCXbQ8-HD.jpg"
     }
   ];
@@ -42,16 +42,17 @@ const Videos = () => {
           </div>
 
           {/* Video Container */}
-          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-8 border-white group">
-            <iframe 
-              src={tabs[activeTab].embedUrl}
-              className="w-full h-full"
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen
-            ></iframe>
+          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-8 border-white group bg-black">
+            <video 
+              key={tabs[activeTab].videoUrl}
+              className="w-full h-full object-cover"
+              controls
+              playsInline
+              poster={tabs[activeTab].thumb}
+            >
+              <source src={tabs[activeTab].videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ const Clubhouse = () => {
       {/* Parallax Background */}
       <div 
         className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/clubhouse_banner.webp')" }}
+        style={{ backgroundImage: "url('/prop/Copy of Aerial Night.webp')" }}
       />
       
       {/* Multi-layered Overlays */}

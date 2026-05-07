@@ -11,7 +11,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] ease-out scale-105"
           style={{ 
-            backgroundImage: "url('/assets/main_banner-scaled.webp')",
+            backgroundImage: "url('/prop/Copy of Main Entrance.webp')",
           }}
         />
               </div>

@@ -84,12 +84,12 @@ const LeadFormModal = ({ isOpen, onClose }) => {
       />
 
       <div className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl p-6 md:p-8">
-        <div className="flex items-start justify-between gap-6 mb-8">
+        <div className="flex items-start justify-between gap-6 mb-">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--cta-color)] mb-3">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--cta-color)] ">
               Casagrand Casablanca
             </p>
-            <h2 className="text-3xl font-extrabold text-zinc-950 leading-tight">
+            <h2 className="section-title text-cente font-extrabold text-zinc-950 leading-tight">
               Book Your Site Visit
             </h2>
           </div>
