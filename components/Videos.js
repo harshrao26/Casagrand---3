@@ -9,12 +9,12 @@ const Videos = () => {
     { 
       title: "Top 6 Reasons to Buy", 
       videoUrl: "/vid/Copy of Top 6 reasons Casablanca-phase 2.mp4",
-      thumb: "/assets/Screenshot-2025-09-22-115220.png"
+      thumb: "/ol.png"
     },
     { 
       title: "Phase 2 Walkthrough", 
       videoUrl: "/vid/Copy of CG_CASABLANCAPHASE 2-001.mp4",
-      thumb: "/assets/sXsl8PCXbQ8-HD.jpg"
+      thumb: "/ol.png"
     }
   ];
 
