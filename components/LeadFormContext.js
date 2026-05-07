@@ -62,7 +62,7 @@ export const LeadFormFields = ({ consentId = 'lead-consent', onSubmit }) => {
 
       <button
         type="submit"
-        className="cta-button w-full font-bold py-5 rounded-2xl shadow-xl shadow-black/10 transition-all flex items-center justify-center space-x-3 group"
+        className="cta-button w-full shadow-xl shadow-black/10 transition-all group"
       >
         <span>Submit Inquiry</span>
         <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

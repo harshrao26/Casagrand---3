@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -33,4 +32,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

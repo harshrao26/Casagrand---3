@@ -62,9 +62,9 @@ const FloorPlan = () => {
   const [activeTab, setActiveTab] = useState("1 BHK");
 
   return (
-    <section className="pb-20 pt-10 bg-white" id="floorplan">
+    <section className="section-shell bg-white" id="floorplan">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center">Floor <span className="text-amber-500">Plan</span></h2>
+        <h2 className="section-title text-center">Floor <span className="text-amber-500">Plan</span></h2>
         
         <ul className="floorplan-tab-header mb-12">
           {Object.keys(floorPlanData).map((tab) => (
@@ -87,10 +87,10 @@ const FloorPlan = () => {
           >
             {floorPlanData[activeTab].map((plan, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col md:flex-row items-center gap-12 bg-zinc-50 p-8 rounded-3xl">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-zinc-50 soft-card rounded-3xl">
                   <div className="md:w-1/2 text-left space-y-6">
-                    <h3 className="md:text-2xl text-lg font-bold text-[var(--casablanca-brown)]">{plan.title}</h3>
-                    <div className="grid grid-cols-2 gap-8">
+                    <h3 className="text-xl md:text-2xl font-bold text-zinc-900 leading-tight">{plan.title}</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8">
                       <div>
                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">TYPE</p>
                         <p className="font-bold">{plan.type}</p>

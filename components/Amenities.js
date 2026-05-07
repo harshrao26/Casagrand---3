@@ -21,15 +21,15 @@ const Amenities = () => {
   ];
 
   return (
-    <section className="py-10 md:py-20 bg-white" id="amenities">
+    <section className="section-shell bg-white" id="amenities">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center md:mb-16 mb-8">Elite Living <span className="text-amber-500">Amenities</span> </h2>
+        <h2 className="section-title section-header-center">Elite Living <span className="text-amber-500">Amenities</span> </h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:gap-8 gap-4">
           {eliteAmenities.map((item, index) => (
             <div 
               key={index} 
-              className="flex flex-col items-center p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-amber-200 hover:bg-amber-50/30 transition-all group shadow-sm hover:shadow-md"
+              className="flex flex-col items-center p-5 md:p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-amber-200 hover:bg-amber-50/30 transition-all group shadow-sm hover:shadow-md"
             >
               <div className="mb-4 text-amber-600 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}

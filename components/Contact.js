@@ -1,21 +1,21 @@
 "use client";
 
 import React from 'react';
-import { CalendarCheck, Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { LeadFormFields } from './LeadFormContext';
 
 const Contact = () => {
   return (
-    <section className="py-24 bg-zinc-900 text-white relative overflow-hidden" id="contact-us">
+    <section className="section-shell bg-zinc-900 text-white relative overflow-hidden" id="contact-us">
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 content-grid items-center">
           
           <div>
-            <h2 className="text-2xl md:text-5xl font-extrabold mb-8 leading-tight">
+            <h2 className="section-title section-title-on-dark mb-8">
               Book Your <span className="text-amber-500">Site Visit</span> Now
             </h2>
-            <p className="text-zinc-400 text-lg mb-12 max-w-md">
+            <p className="section-copy section-copy-on-dark mb-12 max-w-md">
               Experience the grand living at Casagrand Casablanca. Fill out the form and our representative will get back to you shortly.
             </p>
             
@@ -41,10 +41,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl text-zinc-950">
+          <div className="bg-white soft-card rounded-[32px] md:rounded-[40px] shadow-2xl text-zinc-950">
              
-            <h3 className="text-2xl md:text-3xl font-extrabold mb-4">Plan a Visit</h3>
-            <p className="text-zinc-500 text-lg mb-10">
+            <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-4">Plan a Visit</h3>
+            <p className="section-copy mb-8 md:mb-10">
               Share your details once and our team will help with brochure, pricing, and site visit scheduling.
             </p>
             <LeadFormFields consentId="contact-lead-consent" />

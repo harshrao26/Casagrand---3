@@ -17,7 +17,7 @@ const Clubhouse = () => {
 
   return (
     <section 
-      className="relative min-h-[80vh] flex items-center py-24 overflow-hidden" 
+      className="relative min-h-[80vh] flex items-center section-shell overflow-hidden" 
       id="communities"
     >
       {/* Parallax Background */}
@@ -32,7 +32,7 @@ const Clubhouse = () => {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/30 z-2" /> */}
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center content-grid">
           
           <motion.div 
             className="lg:w-3/5"
@@ -41,22 +41,19 @@ const Clubhouse = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-xl mb-8">
-              <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-              <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">The Grand Sanctum</span>
-            </div>
+            
 
-            <h2 className="text-2xl md:text-5xl font-black text-white leading-[1.1] mb-8">
+            <h2 className="section-title section-title-on-dark mb-8">
               22,500 Sq.Ft. <br />
               of Pure <span className="text-amber-500 italic">Grandeur.</span>
             </h2>
 
-            <p className="text-zinc-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-medium">
+            <p className="section-copy section-copy-on-dark mb-10 max-w-2xl font-medium">
               Step into a world where luxury meets leisure. Our exquisitely designed clubhouse is the soul of the community, 
               featuring world-class indoor and terrace amenities that overlook the grand swimming pool and central podium.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
               {features.map((feature, index) => (
                 <motion.div 
                   key={index}
@@ -77,7 +74,7 @@ const Clubhouse = () => {
             <button
               type="button"
               onClick={openLeadForm}
-              className="cta-button px-10 py-5 rounded-2xl font-black flex items-center space-x-3 transition-all duration-500 group shadow-2xl shadow-white/5"
+              className="cta-button transition-all duration-500 group shadow-2xl shadow-white/5"
             >
               <span>EXPLORE ALL AMENITIES</span>
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />

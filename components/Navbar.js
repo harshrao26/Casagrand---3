@@ -58,7 +58,7 @@ const Navbar = () => {
             </ul>
             <a 
               href="tel:+911234567890" 
-              className="cta-button flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all"
+              className="cta-button cta-pill transition-all"
             >
               <Phone size={16} />
               <span>Call Now</span>
@@ -73,13 +73,20 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-40 transition-transform duration-500 lg:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex flex-col h-full p-8">
-          <div className="flex justify-between items-center mb-12">
+      <div className={`fixed inset-0 bg-white h-screen z-[100000000000] transition-transform duration-500 lg:hidden overflow-hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{ backgroundImage: "url('/assets/clubhouse_banner.webp')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white/85" />
+        <div className="relative flex flex-col h-full px-8 py-6">
+          <div className="flex justify-between items-center mb-10">
             <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
-            <button onClick={toggleMenu} className="text-zinc-900"><X size={32} /></button>
+            <button onClick={toggleMenu} className="w-10 h-10 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center shadow-sm">
+              <X size={22} />
+            </button>
           </div>
-          <ul className="flex flex-col space-y-8 text-2xl font-extrabold text-zinc-900">
+          <ul className="flex flex-col space-y-5 text-lg font-bold text-zinc-900">
             <li><a href="#overview" onClick={toggleMenu}>Overview</a></li>
             <li><a href="#communities" onClick={toggleMenu}>Communities</a></li>
             <li><a href="#gallery" onClick={toggleMenu}>Gallery</a></li>
@@ -91,12 +98,13 @@ const Navbar = () => {
             <button
               type="button"
               onClick={openMobileLeadForm}
-              className="cta-button w-full text-center py-5 rounded-2xl font-bold flex items-center justify-center space-x-3"
+              className="cta-button w-full"
             >
-              <Phone size={24} />
-              <span className="text-xl">Book Site Visit</span>
+              <Phone size={20} />
+              <span>Book Site Visit</span>
             </button>
           </div>
+          
         </div>
       </div>
     </nav>

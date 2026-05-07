@@ -23,24 +23,24 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="md:py-24 py-12  overflow-hidden" id="gallery">
+    <section className="section-shell overflow-hidden" id="gallery">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-6">
+        <div className="section-header-center">
           <motion.h2 
-            className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4"
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             A Visual <span className="text-amber-500">Symphony.</span>
           </motion.h2>
-          <p className="text-zinc-400 md:text-lg max-w-2xl mx-auto">
+          <p className="section-copy max-w-2xl mx-auto">
             Take a glimpse into the life that awaits you at Casagrand Casablanca. 
             Every corner is crafted for perfection.
           </p>
         </div>
         
-        <div className="relative px-10">
+        <div className="relative px-4 md:px-10">
           <Swiper
             effect={'coverflow'}
             grabCursor={true}

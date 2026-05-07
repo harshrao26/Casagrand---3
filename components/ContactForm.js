@@ -3,10 +3,10 @@ import { User, Phone, Mail, Send } from 'lucide-react';
 
 const ContactForm = () => {
   return (
-    <section className="footer-call-sec bg-zinc-50 py-20" id="contact-us">
+    <section className="section-shell bg-zinc-50" id="contact-us">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="section-heading mb-4">Book Your Site Visit Now</h2>
-        <p className="text-xl text-gray-600 mb-12">Experience Dubai Lifestyle in Kogilu, North Bangalore</p>
+        <h2 className="section-title text-center">Book Your Site Visit Now</h2>
+        <p className="section-copy mb-10 md:mb-12">Experience Dubai Lifestyle in Kogilu, North Bangalore</p>
         
         <div className="footer-call-wrap flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/3">
@@ -18,7 +18,7 @@ const ContactForm = () => {
           </div>
           
           <div className="lg:w-1/2 w-full">
-            <form className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 space-y-6">
+            <form className="bg-white soft-card rounded-3xl shadow-2xl border border-gray-100 space-y-6">
               <div className="relative group">
                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[var(--casablanca-brown)] transition-colors" size={20} />
                 <input 
@@ -56,7 +56,7 @@ const ContactForm = () => {
                 </label>
               </div>
               
-              <button className="cta-button w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-black/20">
+              <button className="cta-button w-full transition-colors shadow-lg shadow-black/20">
                 <Send size={18} />
                 Submit
               </button>

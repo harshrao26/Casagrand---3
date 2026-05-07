@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Play } from 'lucide-react';
 
 const Videos = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,20 +19,20 @@ const Videos = () => {
   ];
 
   return (
-    <section className="py-6 bg-white" id="videos">
+    <section className="section-shell bg-white" id="videos">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-5xl text-black font-extrabold text-black mb-4 text-center mb-6">Visual <span className="text-amber-500">Experience</span></h2>
+        <h2 className="section-title text-center mb-8">Visual <span className="text-amber-500">Experience</span></h2>
         
         <div className="max-w-4xl w-full md:w-auto mx-auto">
           {/* Tabs */}
-          <div className="flex flex-col md:flex-row gap-4  justify-center mb-12 ">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 md:mb-12">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
                 className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all ${
                   activeTab === index 
-                    ? "bg-amber-600 text-white shadow-lg" 
+                    ? "bg-[var(--cta-color)] text-zinc-900 shadow-lg" 
                     : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
                 }`}
               >

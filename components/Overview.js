@@ -16,9 +16,9 @@ const Overview = () => {
   ];
 
   return (
-    <section className="pb-10 bg-white overflow-hidden" id="overview">
+    <section className="section-shell bg-white overflow-hidden" id="overview">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center content-grid">
           
           <motion.div 
             className="lg:w-1/2"
@@ -28,14 +28,14 @@ const Overview = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-               <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-amber-600 mb-4">The Grand Overview</h2>
-              <h3 className="text-2xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-8">
+               <h2 className="section-eyebrow">The Grand Overview</h2>
+              <h3 className="section-title mb-8">
                 A Prestigious Address <br />
                 for the <span className="text-amber-500 text-outline">Privileged Few.</span>
               </h3>
             </div>
             
-            <div className="space-y-6 md:text-lg text-zinc-600 leading-relaxed mb-10">
+            <div className="space-y-5 md:space-y-6 section-copy mb-10">
               <p>
                 <span className="font-bold text-zinc-900">Casagrand Casablanca </span> offers an exceptional lifestyle with premium villa plots in the thriving hub of Oragadam. It&apos;s the perfect canvas for your dream home.
               </p>
@@ -57,7 +57,7 @@ const Overview = () => {
               <button
                 type="button"
                 onClick={openLeadForm}
-                className="cta-button w-full sm:w-auto px-8 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 transition-all shadow-xl shadow-zinc-200"
+                className="cta-button w-full sm:w-auto transition-all shadow-xl shadow-zinc-200"
               >
                 <Download size={20} />
                 <span>Download Brochure</span>

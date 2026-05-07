@@ -12,7 +12,7 @@ const MobileActions = () => {
       <div className="flex w-full">
         <a 
           href="tel:9790921293" 
-          className="cta-button flex-1 py-4 flex items-center justify-center gap-2 font-bold"
+          className="cta-button flex-1"
         >
           <Phone size={18} />
           Call Us
@@ -20,7 +20,7 @@ const MobileActions = () => {
         <button
           type="button"
           onClick={openLeadForm}
-          className="cta-button flex-1 py-4 flex items-center justify-center gap-2 font-bold border-l border-black/10"
+          className="cta-button flex-1 border-l border-black/10"
         >
           <MessageSquare size={18} />
           Enquire Now

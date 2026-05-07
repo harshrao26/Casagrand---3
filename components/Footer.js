@@ -1,20 +1,20 @@
 "use client";
 
 import React from 'react';
-import { Phone, Mail, MapPin, MessageSquare, Camera, Send, Play } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-zinc-900 text-white pt-20 pb-10">
+    <footer className="bg-zinc-900 text-white pt-12 md:pt-20 pb-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           
           {/* Brand Column */}
           <div className="space-y-6">
             <img src="/assets/cg_logo.png" alt="Casagrand" className="h-12 brightness-0 invert" />
-            <p className="text-zinc-400 leading-relaxed">
+            <p className="section-copy section-copy-on-dark">
               Casagrand Casablanca brings you the finest luxury living in the heart of the city. Experience unparalleled comfort and world-class amenities designed for your lifestyle.
             </p>
              
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-8 uppercase tracking-widest text-amber-500">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Quick Links</h3>
             <ul className="space-y-4">
               <li><a href="#overview" className="text-zinc-400 hover:text-white transition-colors">Overview</a></li>
               <li><a href="#amenities" className="text-zinc-400 hover:text-white transition-colors">Amenities</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-8 uppercase tracking-widest text-amber-500">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Contact Us</h3>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-amber-600 shrink-0 mt-1" size={20} />
@@ -53,7 +53,7 @@ const Footer = () => {
 
           {/* Newsletter / Disclaimer */}
           <div>
-            <h3 className="text-lg font-bold mb-8 uppercase tracking-widest text-amber-500">Legal</h3>
+            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Legal</h3>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6">
               *Disclaimer: The information provided in this website is for guidance only. Prices and availability are subject to change without notice.
             </p>
