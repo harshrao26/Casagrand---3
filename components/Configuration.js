@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Configuration = () => {
   const configs = [
@@ -8,41 +8,100 @@ const Configuration = () => {
   ];
 
   return (
-<div className="section-shell section-topless">
-        <h2 className="section-title text-center mb-8">Plot Sizes & <span className="text-amber-500">Pricing</span> </h2>
+    <section
+      className="relative py-20 px-4 overflow-hidden bg-[#0c0c0c]"
+      id="configuration"
+    >
+      {/* Background Blur */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full"></div>
 
-    <section className="ccd-config-sec text-white py-12 md:py-20" id="configuration">
+     {/* Heading */}
+<div className="text-center mb-12">
+  
+  <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+    Plot Sizes &{" "}
+    <span className="text-[#FD9A00]">Pricing</span>
+  </h2>
 
-      <div className="container mx-auto px-4">
-        
-        <div className="ccd-config-top mb-10 md:mb-12 flex flex-col md:flex-row justify-between text-center md:text-left items-center border-b border-white/10 pb-6 gap-4">
-          <span className="md:text-xl text-lg font-medium">Casagrand Casablanca - Oragadam</span>
-          <span className="md:text-2xl text-xl font-bold text-amber-500">Starting from ₹ 44 Lacs*</span>
-        </div>
-
-        <div className="ccd-config-tabel overflow-x-auto rounded-xl shadow-2xl backdrop-blur-md bg-black/30">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-black/50">
-                <th className="p-4 md:p-6 text-left border border-white/20 uppercase tracking-widest">TYPE</th>
-                <th className="p-4 md:p-6 text-left border border-white/20 uppercase tracking-widest">AREA (SQFT)</th>
-                <th className="p-4 md:p-6 text-left border border-white/20 uppercase tracking-widest">PRICE</th>
-              </tr>
-            </thead>
-            <tbody>
-              {configs.map((config, index) => (
-                <tr key={index} className="hover:bg-white/5 transition-colors">
-                  <td className="p-4 md:p-6 border border-white/10 font-bold">{config.type}</td>
-                  <td className="p-4 md:p-6 border border-white/10 font-bold">{config.area}</td>
-                  <td className="p-4 md:p-6 border border-white/10 font-bold text-amber-500">{config.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+  <p className="text-gray-50 mt-3 max-w-xl mx-auto text-base">
+    Premium villa plots crafted for modern living with excellent
+    connectivity and investment potential.
+  </p>
 </div>
+
+{/* Top Card */}
+<div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center mb-6 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
+  
+  <div>
+    <h3 className="text-lg md:text-xl font-semibold text-white">
+      Casagrand Casablanca
+    </h3>
+
+    <p className="text-gray-50 text-center mt-1 text-base">
+      Oragadam, Chennai
+    </p>
+  </div>
+
+  <div className="mt-4 md:mt-0 text-center md:text-right">
+    <p className="text-gray-50 text-xs">
+      Starting Price
+    </p>
+
+    <h3 className="text-2xl font-bold text-[#FD9A00]">
+      ₹ 44 Lacs*
+    </h3>
+  </div>
+</div>
+
+{/* Table */}
+<div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.3)]">
+  
+  <table className="w-full">
+    
+    <thead>
+      <tr className="border-b border-white/10 bg-white/[0.03]">
+        
+        <th className="text-left p-4 md:p-5 text-gray-300 text-xs uppercase tracking-[2px] font-medium">
+          Type
+        </th>
+
+        <th className="text-left p-4 md:p-5 text-gray-300 text-xs uppercase tracking-[2px] font-medium">
+          Area (Sqft)
+        </th>
+
+        <th className="text-left p-4 md:p-5 text-gray-300 text-xs uppercase tracking-[2px] font-medium">
+          Price
+        </th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {configs.map((config, index) => (
+        <tr
+          key={index}
+          className="border-b border-white/5 hover:bg-white/[0.03] transition-all duration-300"
+        >
+          <td className="p-4 md:p-5 text-base md:text-base text-white font-medium">
+            {config.type}
+          </td>
+
+          <td className="p-4 md:p-5 text-base md:text-base text-gray-300 font-medium">
+            {config.area}
+          </td>
+
+          <td className="p-4 md:p-5">
+            <span className="inline-flex items-center rounded-full bg-[#FD9A00]/10 border border-[#FD9A00]/20 px-3 py-1.5 text-[#FD9A00] text-base font-semibold">
+              {config.price}
+            </span>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+
+  </table>
+</div>
+    </section>
   );
 };
 

@@ -86,7 +86,7 @@ const Navbar = () => {
               <X size={22} />
             </button>
           </div>
-          <ul className="flex flex-col space-y-5 text-lg font-bold text-zinc-900">
+          <ul className="flex flex-col space-y-5 text-lg font-semibold text-zinc-900">
             <li><a href="#overview" onClick={toggleMenu}>Overview</a></li>
             <li><a href="#communities" onClick={toggleMenu}>Communities</a></li>
             <li><a href="#gallery" onClick={toggleMenu}>Gallery</a></li>

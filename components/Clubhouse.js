@@ -17,7 +17,7 @@ const Clubhouse = () => {
 
   return (
     <section 
-      className="relative min-h-[80vh] flex items-center section-shell overflow-hidden" 
+      className="relative min-h-[60vh] flex items-center section-shell overflow-hidden" 
       id="communities"
     >
       {/* Parallax Background */}

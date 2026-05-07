@@ -15,8 +15,8 @@ const Location = () => {
   ];
 
   return (
-    <section className="section-shell section-topless" id="location">
-      <div className="container mx-auto px-4">
+    <section className="section-shell  section-topless" id="location">
+      <div className="container mx-auto pt-10 px-4">
         <h2 className="section-title text-center mb-8">Elite <span className="text-amber-500">Nearby Essentials</span></h2>
         
         <div className="grid lg:grid-cols-1 gap-8 md:gap-12 items-start">

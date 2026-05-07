@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectCoverflow, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 
 const Gallery = () => {
@@ -58,13 +57,13 @@ const Gallery = () => {
               modifier: 1,
               slideShadows: true,
             }}
-            navigation={true}
-            modules={[EffectCoverflow, Navigation, Autoplay]}
+            navigation={false}
+            modules={[EffectCoverflow, Autoplay]}
             className="gallerySwiper !overflow-visible"
           >
             {images.map((item, index) => (
-              <SwiperSlide key={index} className="max-w-[400px] md:max-w-[700px] rounded-[32px] overflow-hidden group shadow-2xl transition-all">
-                <div className="relative aspect-video">
+              <SwiperSlide key={index} className="max-w-[500px] md:max-w-[900px] rounded-[32px] overflow-hidden group shadow-2xl transition-all">
+                <div className="relative aspect-[3/2]">
                   <img 
                     src={item.src} 
                     alt={item.title} 
@@ -79,25 +78,8 @@ const Gallery = () => {
           </Swiper>
         </div>
       </div>
-
-      <style jsx global>{`
-        .gallerySwiper .swiper-button-next,
-        .gallerySwiper .swiper-button-prev {
-          color: #ffffffff !important;
-          background: rgba(255, 255, 255, 0.1);
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .gallerySwiper .swiper-button-next:after,
-        .gallerySwiper .swiper-button-prev:after {
-          font-size: 16px;
-          font-weight: bold;
-        }
-      `}</style>
     </section>
+
   );
 };
 

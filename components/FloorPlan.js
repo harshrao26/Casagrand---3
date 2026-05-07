@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { ArrowRight } from "lucide-react";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const floorPlanData = {
   "1 BHK": [
@@ -15,17 +17,10 @@ const floorPlanData = {
       carpetArea: "647 SQ.FT",
       balconyArea: "93 SQ.FT",
       totalArea: "740 SQ.FT",
-      img: "/assets/3.jpg"
+      img: "/assets/3.jpg",
     },
-    {
-      title: "1 Bedroom Apartment (Type B)",
-      type: "1 BHK",
-      carpetArea: "622 SQ.FT",
-      balconyArea: "50 SQ.FT",
-      totalArea: "672 SQ.FT",
-      img: "/assets/2.jpg"
-    }
   ],
+
   "2 BHK": [
     {
       title: "2 Bedroom Apartment (Type A)",
@@ -33,9 +28,10 @@ const floorPlanData = {
       carpetArea: "950 SQ.FT",
       balconyArea: "100 SQ.FT",
       totalArea: "1050 SQ.FT",
-      img: "/assets/2-2.jpg"
-    }
+      img: "/assets/2-2.jpg",
+    },
   ],
+
   "3 BHK": [
     {
       title: "3 Bedroom Apartment (Type A)",
@@ -43,80 +39,136 @@ const floorPlanData = {
       carpetArea: "1250 SQ.FT",
       balconyArea: "120 SQ.FT",
       totalArea: "1370 SQ.FT",
-      img: "/assets/13.jpg"
-    }
+      img: "/assets/13.jpg",
+    },
   ],
-  "4 BHK": [
-    {
-      title: "4 Bedroom Apartment (Type A)",
-      type: "4 BHK",
-      carpetArea: "1650 SQ.FT",
-      balconyArea: "150 SQ.FT",
-      totalArea: "1800 SQ.FT",
-      img: "/assets/4-1.jpg"
-    }
-  ]
 };
 
 const FloorPlan = () => {
   const [activeTab, setActiveTab] = useState("1 BHK");
 
   return (
-    <section className="section-shell bg-white" id="floorplan">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title text-center">Floor <span className="text-amber-500">Plan</span></h2>
-        
-        <ul className="floorplan-tab-header mb-12">
-          {Object.keys(floorPlanData).map((tab) => (
-            <li key={tab}>
-              <button 
-                onClick={() => setActiveTab(tab)}
-                className={`nav-link pb-2 transition-all ${activeTab === tab ? 'active border-b-2 border-black font-bold' : 'opacity-60 hover:opacity-100'}`}
-              >
-                {tab}
-              </button>
-            </li>
-          ))}
-        </ul>
+    <section
+      className="py-12 md:py-16 bg-gradient-to-b from-white to-[#f8f8f8]"
+      id="floorplan"
+    >
+      <div className="max-w-6xl mx-auto px-4">
 
-        <div className="floorplan-content">
-          <Swiper
-            navigation={true}
-            modules={[Navigation]}
-            className="floorplanSwiper"
-          >
-            {floorPlanData[activeTab].map((plan, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-zinc-50 soft-card rounded-3xl">
-                  <div className="md:w-1/2 text-left space-y-6">
-                    <h3 className="text-xl md:text-2xl font-bold text-zinc-900 leading-tight">{plan.title}</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8">
-                      <div>
-                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">TYPE</p>
-                        <p className="font-bold">{plan.type}</p>
+        {/* Heading */}
+        <div className="text-center mb-8 md:mb-10">
+           
+
+          <h2 className="text-2xl md:text-4xl font-bold text-zinc-900">
+            Floor <span className="text-amber-500">Plans</span>
+          </h2>
+
+          <p className="text-gray-500 mt-3 max-w-xl mx-auto text-base md:text-base">
+            Spacious layouts with smart interiors and modern living spaces.
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center flex-wrap gap-2 md:gap-3 mb-8">
+          {Object.keys(floorPlanData).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 md:px-5 py-2 rounded-xl transition-all duration-300 text-sm font-medium border ${
+                activeTab === tab
+                  ? "bg-amber-500 text-white border-amber-500"
+                  : "bg-white text-zinc-700 border-zinc-200 hover:border-amber-400 hover:text-amber-500"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {/* Swiper */}
+        <Swiper
+          navigation={true}
+          pagination={{ clickable: true }}
+          modules={[Navigation, Pagination]}
+          className="pb-10"
+        >
+          {floorPlanData[activeTab].map((plan, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white r ">
+
+                <div className="grid lg:grid-cols-2">
+
+                  {/* Left */}
+                  <div className="  flex flex-col justify-center">
+
+                   
+                    <h3 className="text-xl md:text-3xl font-bold text-zinc-900 leading-snug mb-5">
+                      {plan.title}
+                    </h3>
+
+                    {/* Cards */}
+                    <div className="grid grid-cols-2 gap-3">
+
+                      <div className="  rounded-2xl p-4 border border-zinc-100">
+                        <p className="text-[10px] uppercase tracking-[2px] text-gray-400 mb-1">
+                          Type
+                        </p>
+
+                        <h4 className="text-sm md:text-base font-semibold text-zinc-900">
+                          {plan.type}
+                        </h4>
                       </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">CARPET AREA</p>
-                        <p className="font-bold">{plan.carpetArea}</p>
+
+                      <div className="rounded-2xl p-4 border border-zinc-100">
+                        <p className="text-[10px] uppercase tracking-[2px] text-gray-400 mb-1">
+                          Carpet Area
+                        </p>
+
+                        <h4 className="text-sm md:text-base font-semibold text-zinc-900">
+                          {plan.carpetArea}
+                        </h4>
                       </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">BALCONY AREA</p>
-                        <p className="font-bold">{plan.balconyArea}</p>
+
+                      <div className="bg-zinc-50 rounded-2xl p-4 border border-zinc-100">
+                        <p className="text-[10px] uppercase tracking-[2px] text-gray-400 mb-1">
+                          Balcony Area
+                        </p>
+
+                        <h4 className="text-sm md:text-base font-semibold text-zinc-900">
+                          {plan.balconyArea}
+                        </h4>
                       </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">TOTAL CARPET AREA</p>
-                        <p className="font-bold">{plan.totalArea}</p>
+
+                      <div className="bg-amber-500 rounded-2xl p-4">
+                        <p className="text-[10px] uppercase tracking-[2px] text-white/70 mb-1">
+                          Total Area
+                        </p>
+
+                        <h4 className="text-sm md:text-base font-semibold text-white">
+                          {plan.totalArea}
+                        </h4>
                       </div>
                     </div>
                   </div>
-                  <div className="md:w-1/2 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                    <img src={plan.img} alt={plan.title} className="w-full h-auto" />
+
+                  {/* Right */}
+                  <div className=" p-3 md:p-5 flex items-center justify-center">
+
+                    <div className="w-full rounded-2xl overflow-hidden bg-white border border-zinc-200">
+
+                      <img
+                        src={plan.img}
+                        alt={plan.title}
+                        className="w-full h-auto object-contain"
+                      />
+
+                    </div>
                   </div>
+
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
