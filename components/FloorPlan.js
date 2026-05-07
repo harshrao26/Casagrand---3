@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { ArrowRight } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,7 +48,7 @@ const FloorPlan = () => {
 
   return (
     <section
-      className="py-12 md:py-16 bg-gradient-to-b from-white to-[#f8f8f8]"
+      className="section-shell  "
       id="floorplan"
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -58,17 +57,17 @@ const FloorPlan = () => {
         <div className="text-center mb-8 md:mb-10">
            
 
-          <h2 className="text-2xl md:text-5xl font-bold text-zinc-900">
+          <h2 className="section-title">
             Floor <span className="text-amber-500">Plans</span>
           </h2>
 
-          <p className="text-gray-500 mt-3 max-w-xl mx-auto text-base md:text-base">
+          <p className="section-copy mt-3 max-w-xl mx-auto">
             Spacious layouts with smart interiors and modern living spaces.
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center flex-wrap gap-2 md:gap-3 mb-8">
+          <div className="flex justify-center flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
           {Object.keys(floorPlanData).map((tab) => (
             <button
               key={tab}
@@ -101,7 +100,7 @@ const FloorPlan = () => {
                   <div className="  flex flex-col justify-center">
 
                    
-                    <h3 className="text-xl md:text-3xl font-bold text-zinc-900 leading-snug mb-5">
+                    <h3 className="text-lg md:text-xl font-bold text-zinc-900 leading-snug mb-5">
                       {plan.title}
                     </h3>
 

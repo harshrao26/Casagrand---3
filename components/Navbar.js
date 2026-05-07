@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Left Menu */}
-          <ul className={`hidden lg:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
+          <ul className={`hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
             <li><a href="#overview" className="hover:text-amber-500 transition-colors">Overview</a></li>
             <li><a href="#communities" className="hover:text-amber-500 transition-colors">Communities</a></li>
             <li><a href="#gallery" className="hover:text-amber-500 transition-colors">Gallery</a></li>
@@ -50,8 +50,8 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Right Menu */}
-          <div className="hidden lg:flex items-center space-x-10">
-            <ul className={`flex items-center space-x-10 text-sm font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
+          <div className="hidden lg:flex items-center space-x-8">
+            <ul className={`flex items-center space-x-8 text-xs font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
               <li><a href="#floorplan" className="hover:text-amber-500 transition-colors">Floor Plan</a></li>
               <li><a href="#location" className="hover:text-amber-500 transition-colors">Location</a></li>
               <li><a href="#contact-us" className="hover:text-amber-500 transition-colors">Contact</a></li>

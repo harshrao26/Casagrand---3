@@ -43,17 +43,17 @@ const Clubhouse = () => {
           >
             
 
-            <h2 className="section-title section-title-on-dark mb-8">
+            <h2 className="section-title section-title-on-dark mb-6">
               27 Acres. <br />
               of Pure <span className="text-amber-500 italic">Grandeur.</span>
             </h2>
 
-            <p className="section-copy section-copy-on-dark mb-10 max-w-2xl font-medium">
+            <p className="section-copy section-copy-on-dark mb-8 max-w-2xl font-medium">
               Step into a world where luxury meets leisure. Our exquisitely designed clubhouse is the soul of the community, 
               featuring world-class indoor and terrace amenities that overlook the grand swimming pool and central podium.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
                 <motion.div 
                   key={index}
@@ -66,7 +66,7 @@ const Clubhouse = () => {
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
-                  <span className="text-white font-bold md:text-lg group-hover:text-amber-400 transition-colors">{feature.text}</span>
+                  <span className="text-white font-bold text-sm md:text-base group-hover:text-amber-400 transition-colors">{feature.text}</span>
                 </motion.div>
               ))}
             </div>

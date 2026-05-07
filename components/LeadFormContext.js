@@ -22,13 +22,13 @@ export const LeadFormFields = ({ consentId = 'lead-consent', onSubmit }) => {
   };
 
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
+    <form className="space-y-4" onSubmit={handleSubmit}>
       <div className="relative">
         <User className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400" size={20} />
         <input
           type="text"
           placeholder="Your Name"
-          className="w-full pl-12 pr-5 py-4 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
+          className="w-full pl-12 pr-5 py-3.5 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
           required
         />
       </div>
@@ -38,7 +38,7 @@ export const LeadFormFields = ({ consentId = 'lead-consent', onSubmit }) => {
         <input
           type="tel"
           placeholder="Phone Number"
-          className="w-full pl-12 pr-5 py-4 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
+          className="w-full pl-12 pr-5 py-3.5 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
           required
         />
       </div>
@@ -48,7 +48,7 @@ export const LeadFormFields = ({ consentId = 'lead-consent', onSubmit }) => {
         <input
           type="email"
           placeholder="Email Address"
-          className="w-full pl-12 pr-5 py-4 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
+          className="w-full pl-12 pr-5 py-3.5 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-[var(--cta-color)]/30 focus:border-[var(--cta-color)] transition-all"
           required
         />
       </div>
@@ -83,13 +83,13 @@ const LeadFormModal = ({ isOpen, onClose }) => {
         onClick={onClose}
       />
 
-      <div className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl p-6 md:p-8">
-        <div className="flex items-start justify-between gap-6 mb-">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-5 md:p-7">
+        <div className="flex items-start justify-between gap-6 mb-6">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--cta-color)] ">
               Casagrand Casablanca
             </p>
-            <h2 className="section-title text-cente font-extrabold text-zinc-950 leading-tight">
+            <h2 className="section-title font-extrabold text-zinc-950 leading-tight">
               Book Your Site Visit
             </h2>
           </div>

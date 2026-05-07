@@ -9,21 +9,21 @@ const Configuration = () => {
 
   return (
     <section
-      className="relative py-20 mx-auto px-4 overflow-hidden bg-[#0c0c0c]"
+      className="section-shell relative mx-auto px-4 overflow-hidden bg-[#0c0c0c]"
       id="configuration"
     >
       {/* Background Blur */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full"></div>
 
      {/* Heading */}
-<div className="text-center mb-12">
+<div className="text-center mb-8 md:mb-10">
   
-  <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight">
+  <h2 className="section-title section-title-on-dark">
     Plot Sizes &{" "}
     <span className="text-[#FD9A00]">Pricing</span>
   </h2>
 
-  <p className="text-gray-50 mt-3 max-w-xl mx-auto text-base">
+  <p className="section-copy section-copy-on-dark mt-3 max-w-xl mx-auto">
     Premium villa plots crafted for modern living with excellent
     connectivity and investment potential.
   </p>
@@ -33,11 +33,11 @@ const Configuration = () => {
 <div className="backdrop-blur-xl  max-w-7xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center mb-6 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
   
   <div>
-    <h3 className="text-lg md:text-xl font-semibold text-white">
+    <h3 className="text-base md:text-lg font-semibold text-white">
       Casagrand Casablanca
     </h3>
 
-    <p className="text-gray-50 text-center mt-1 text-base">
+    <p className="text-gray-50 text-center mt-1 text-sm md:text-base">
       Oragadam, Chennai
     </p>
   </div>
@@ -47,7 +47,7 @@ const Configuration = () => {
       Starting Price
     </p>
 
-    <h3 className="text-2xl font-bold text-[#FD9A00]">
+    <h3 className="text-lg md:text-xl font-bold text-[#FD9A00]">
       ₹ 44 Lacs*
     </h3>
   </div>

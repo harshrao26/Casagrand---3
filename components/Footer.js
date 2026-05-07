@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-zinc-900 text-white pt-12 md:pt-20 pb-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
           
           {/* Brand Column */}
           <div className="space-y-6">
@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Quick Links</h3>
+            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Quick Links</h3>
             <ul className="space-y-4">
               <li><a href="#overview" className="text-white hover:text-white transition-colors">Overview</a></li>
               <li><a href="#amenities" className="text-white hover:text-white transition-colors">Amenities</a></li>
@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Contact Us</h3>
+            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Contact Us</h3>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-amber-600 shrink-0 mt-1" size={20} />
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Newsletter / Disclaimer */}
           <div>
-            <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Legal</h3>
+            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Legal</h3>
             <p className="text-white text-sm leading-relaxed mb-6">
               *Disclaimer: The information provided in this website is for guidance only. Prices and availability are subject to change without notice.
             </p>
@@ -83,6 +83,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <p className='text-xs text-zinc-500 text-center max-w-4xl mx-auto mt-10 pb-2'>
+*Disclaimer: The information provided on this website is for general informational purposes only. All renderings, floor plans, and maps are artist&apos;s conceptions and not actual depictions of the building or its surroundings. Prices and availability are subject to change without notice. Please verify all details with our sales team before making a purchase.
+
+
+Enquire
+
+Brochure
+      </p>
     </footer>
   );
 };
