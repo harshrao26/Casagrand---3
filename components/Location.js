@@ -23,7 +23,7 @@ const Location = () => {
           {/* Map Side */}
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[360px] md:h-[500px] relative">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8004.399820820603!2d77.6154667!3d13.1101137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1986bd52076d%3A0x5e02cedde92bff31!2sCasagrand%20Estancia!5e1!3m2!1sen!2sin!4v1758084870128!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d249596.35857717888!2d77.542995!3d12.855327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae416fa3f56111%3A0x71b84726cf41200a!2sCasagrand%20Casablanca!5e1!3m2!1sen!2sin!4v1778133269401!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

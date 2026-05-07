@@ -60,7 +60,7 @@ const Gallery = () => {
           >
             {images.map((item, index) => (
               <SwiperSlide key={index} className="max-w-[500px] md:max-w-[900px] rounded-[32px] overflow-hidden group shadow-2xl transition-all">
-                <div className="relative aspect-[3/2]">
+                <div className="relative h-[320px] md:h-[560px]">
                   <img 
                     src={item.src} 
                     alt={item.title} 

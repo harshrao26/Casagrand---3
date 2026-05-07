@@ -56,13 +56,14 @@ const Navbar = () => {
               <li><a href="#location" className="hover:text-amber-500 transition-colors">Location</a></li>
               <li><a href="#contact-us" className="hover:text-amber-500 transition-colors">Contact</a></li>
             </ul>
-            <a 
-              href="tel:+911234567890" 
+            <button
+              type="button"
+              onClick={openLeadForm}
               className="cta-button cta-pill transition-all"
             >
               <Phone size={16} />
               <span>Call Now</span>
-            </a>
+            </button>
           </div>
 
           <div className="mt-auto flex lg:hidden">

@@ -63,7 +63,7 @@ const Overview = () => {
                 <span>Download Brochure</span>
               </button>
               <p className="text-xs font-mono text-zinc-400">
-                RERA: TN/01/Building/0123/2025
+                PRM/KA/RERA/1251/310/PR/040524/006862
               </p>
             </div>
           </motion.div>

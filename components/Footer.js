@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { useLeadForm } from './LeadFormContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { openLeadForm } = useLeadForm();
 
   return (
     <footer className="bg-zinc-900 text-white pt-12 md:pt-20 pb-10">
@@ -42,7 +44,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-4">
                 <Phone className="text-amber-600 shrink-0" size={20} />
-                <a href="tel:+911234567890" className="text-white hover:text-white transition-colors">+91 12345 67890</a>
+                <button type="button" onClick={openLeadForm} className="text-white hover:text-white transition-colors text-left">
+                  +91 12345 67890
+                </button>
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="text-amber-600 shrink-0" size={20} />
@@ -64,7 +68,7 @@ const Footer = () => {
             <div className="p-4 border border-zinc-800 rounded-lg">
               <p className="text-xs text-zinc-500">
                 RERA Number: <br />
-                <span className="text-zinc-300 font-mono">TN/01/Layout/0001/2024</span>
+                <span className="text-zinc-300 font-mono">PRM/KA/RERA/1251/310/PR/040524/006862</span>
               </p>
             </div>
           </div>

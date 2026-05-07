@@ -10,13 +10,14 @@ const MobileActions = () => {
   return (
     <div className="ccd-mb-footer">
       <div className="flex w-full">
-        <a 
-          href="tel:9790921293" 
+        <button
+          type="button"
+          onClick={openLeadForm}
           className="cta-button flex-1"
         >
           <Phone size={18} />
           Call Us
-        </a>
+        </button>
         <button
           type="button"
           onClick={openLeadForm}
