@@ -65,10 +65,23 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Toggle */}
-          <button className="lg:hidden p-2 text-zinc-900" onClick={toggleMenu}>
+          <div className="mt-auto flex lg:hidden">
+            <button
+              type="button"
+              onClick={openMobileLeadForm}
+              className="cta-button w-full"
+            >
+              <Phone size={20} />
+              <span>Book Site Visit</span>
+            </button>
+<button className="lg:hidden p-2 text-zinc-900" onClick={toggleMenu}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
+
+          </div>
+
+          {/* Mobile Toggle */}
+          
         </div>
       </div>
 

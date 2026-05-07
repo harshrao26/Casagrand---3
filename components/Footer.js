@@ -24,11 +24,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Quick Links</h3>
             <ul className="space-y-4">
-              <li><a href="#overview" className="text-zinc-400 hover:text-white transition-colors">Overview</a></li>
-              <li><a href="#amenities" className="text-zinc-400 hover:text-white transition-colors">Amenities</a></li>
-              <li><a href="#gallery" className="text-zinc-400 hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#floorplan" className="text-zinc-400 hover:text-white transition-colors">Floor Plan</a></li>
-              <li><a href="#location" className="text-zinc-400 hover:text-white transition-colors">Location</a></li>
+              <li><a href="#overview" className="text-white hover:text-white transition-colors">Overview</a></li>
+              <li><a href="#amenities" className="text-white hover:text-white transition-colors">Amenities</a></li>
+              <li><a href="#gallery" className="text-white hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#floorplan" className="text-white hover:text-white transition-colors">Floor Plan</a></li>
+              <li><a href="#location" className="text-white hover:text-white transition-colors">Location</a></li>
             </ul>
           </div>
 
@@ -38,15 +38,15 @@ const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-amber-600 shrink-0 mt-1" size={20} />
-                <span className="text-zinc-400">Vallakkottai, Oragadam, Chennai, Tamil Nadu 602105</span>
+                <span className="text-white">Vallakkottai, Oragadam, Chennai, Tamil Nadu 602105</span>
               </li>
               <li className="flex items-center space-x-4">
                 <Phone className="text-amber-600 shrink-0" size={20} />
-                <a href="tel:+911234567890" className="text-zinc-400 hover:text-white transition-colors">+91 12345 67890</a>
+                <a href="tel:+911234567890" className="text-white hover:text-white transition-colors">+91 12345 67890</a>
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="text-amber-600 shrink-0" size={20} />
-                <a href="mailto:info@casagrand.com" className="text-zinc-400 hover:text-white transition-colors">info@casagrand.com</a>
+                <a href="mailto:info@casagrand.com" className="text-white hover:text-white transition-colors">info@casagrand.com</a>
               </li>
             </ul>
           </div>
@@ -54,12 +54,12 @@ const Footer = () => {
           {/* Newsletter / Disclaimer */}
           <div>
             <h3 className="text-lg font-bold mb-6 md:mb-8 uppercase tracking-widest text-amber-500">Legal</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+            <p className="text-white text-sm leading-relaxed mb-6">
               *Disclaimer: The information provided in this website is for guidance only. Prices and availability are subject to change without notice.
             </p>
             <ul className="space-y-2 mb-6 text-sm">
-              <li><a href="https://casagrandcasablanca.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="https://casagrandcasablanca.com/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+              <li><a href="https://casagrandcasablanca.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="https://casagrandcasablanca.com/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Terms & Conditions</a></li>
             </ul>
             <div className="p-4 border border-zinc-800 rounded-lg">
               <p className="text-xs text-zinc-500">
