@@ -5,13 +5,11 @@ import { School, Hospital, Building2, Store, Plane, Train } from 'lucide-react';
 
 const Location = () => {
   const essentials = [
-    { icon: <Building2 />, label: "SIPCOT Industrial Hub", dist: "5 mins" },
-    { icon: <Building2 />, label: "Renault Nissan / Daimler", dist: "10 mins" },
-    { icon: <School />, label: "Sethu Bhaskara School", dist: "12 mins" },
-    { icon: <Hospital />, label: "Jaya Hospital", dist: "15 mins" },
-    { icon: <Store />, label: "Hiranandani Parks", dist: "10 mins" },
-    { icon: <Train />, label: "Vandalur Railway Station", dist: "25 mins" },
-    { icon: <Plane />, label: "Chennai Intl Airport", dist: "45 mins" },
+    { icon: <Building2 />, label: "Forum   Mall", dist: "5 mins" },
+    { icon: <Building2 />, label: "VAJARAHALLI METRO STATION", dist: "5 mins" },
+    { icon: <School />, label: "JP NAGAR, GLOBAL TECH PARK", dist: "10 mins" },
+    { icon: <Hospital />, label: "Electronic City", dist: "20 mins" }
+   
   ];
 
   return (
@@ -45,7 +43,7 @@ const Location = () => {
                   {React.cloneElement(item.icon, { size: 20 })}
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-zinc-900 leading-tight mb-1">{item.label}</p>
+                  <p className="text-sm font-bold text-zinc-900 leading-tight uppercase mb-1">{item.label}</p>
                   <p className="text-xs font-medium text-amber-700 uppercase tracking-widest">{item.dist}</p>
                 </div>
               </div>

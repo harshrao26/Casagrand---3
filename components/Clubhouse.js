@@ -44,7 +44,7 @@ const Clubhouse = () => {
             
 
             <h2 className="section-title section-title-on-dark mb-8">
-              22,500 Sq.Ft. <br />
+              27 Acres. <br />
               of Pure <span className="text-amber-500 italic">Grandeur.</span>
             </h2>
 

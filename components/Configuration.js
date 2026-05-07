@@ -18,7 +18,7 @@ const Configuration = () => {
      {/* Heading */}
 <div className="text-center mb-12">
   
-  <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+  <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight">
     Plot Sizes &{" "}
     <span className="text-[#FD9A00]">Pricing</span>
   </h2>

@@ -253,6 +253,11 @@ html {
   color: #111827 !important;
 }
 
+.gallerySwiper .swiper-button-next,
+.gallerySwiper .swiper-button-prev {
+  display: none !important;
+}
+
 .cta-button svg {
   flex-shrink: 0;
 }

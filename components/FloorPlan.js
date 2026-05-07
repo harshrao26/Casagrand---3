@@ -10,17 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const floorPlanData = {
-  "1 BHK": [
-    {
-      title: "1 Bedroom Apartment (Type A)",
-      type: "1 BHK + Studio",
-      carpetArea: "647 SQ.FT",
-      balconyArea: "93 SQ.FT",
-      totalArea: "740 SQ.FT",
-      img: "/assets/3.jpg",
-    },
-  ],
-
   "2 BHK": [
     {
       title: "2 Bedroom Apartment (Type A)",
@@ -42,10 +31,21 @@ const floorPlanData = {
       img: "/assets/13.jpg",
     },
   ],
+
+  "4 BHK": [
+    {
+      title: "4 Bedroom Apartment (Type A)",
+      type: "4 BHK",
+      carpetArea: "1550 SQ.FT",
+      balconyArea: "150 SQ.FT",
+      totalArea: "1700 SQ.FT",
+      img: "/assets/14.jpg",
+    },
+  ],
 };
 
 const FloorPlan = () => {
-  const [activeTab, setActiveTab] = useState("1 BHK");
+  const [activeTab, setActiveTab] = useState("2 BHK");
 
   return (
     <section
@@ -58,7 +58,7 @@ const FloorPlan = () => {
         <div className="text-center mb-8 md:mb-10">
            
 
-          <h2 className="text-2xl md:text-4xl font-bold text-zinc-900">
+          <h2 className="text-2xl md:text-5xl font-bold text-zinc-900">
             Floor <span className="text-amber-500">Plans</span>
           </h2>
 
