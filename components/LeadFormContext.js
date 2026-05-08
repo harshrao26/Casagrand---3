@@ -73,7 +73,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
           type="text"
           name="name"
           placeholder="Your Name"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[var(--accent)] focus:bg-white focus:ring-4 focus:ring-[var(--accent)]/10"
           required
         />
       </div>
@@ -90,7 +90,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
           title="Enter a valid Indian mobile number."
           inputMode="tel"
           placeholder="Phone Number"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[var(--accent)] focus:bg-white focus:ring-4 focus:ring-[var(--accent)]/10"
           required
         />
       </div>
@@ -106,7 +106,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
           pattern={EMAIL_PATTERN}
           title="Enter a valid email address."
           placeholder="Email Address"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[var(--accent)] focus:bg-white focus:ring-4 focus:ring-[var(--accent)]/10"
           required
         />
       </div>
@@ -115,7 +115,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         <input
           type="checkbox"
           id={consentId}
-          className="mt-1 accent-[#FCB33A]"
+          className="mt-1 accent-[var(--accent)]"
           defaultChecked
         />
         <label htmlFor={consentId} className="text-xs leading-relaxed text-zinc-500">
@@ -130,7 +130,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-zinc-950 px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[#FCB33A] hover:text-black"
+        className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--accent)] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[var(--accent-hover)]"
       >
         <span>{status === "submitting" ? "Submitting..." : "Submit Inquiry"}</span>
         <Send
@@ -161,7 +161,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
       />
 
       <div className="relative grid w-full max-w-4xl overflow-hidden rounded-[36px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] md:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative hidden min-h-[520px] overflow-hidden bg-zinc-950 md:block">
+        <div className="relative hidden min-h-[520px] overflow-hidden bg-[var(--secondary-1)] md:block">
           <div
             className="absolute inset-0 bg-cover bg-left"
             style={{ backgroundImage: "url('/prop/Copy of Main Entrance.webp')" }}
@@ -169,7 +169,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent" />
 
           <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-black">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-white">
               <MapPin size={14} />
               Kanakapura Road
             </p>
@@ -196,7 +196,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
           </button>
 
           <div className="mb-7 pr-12">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#FCB33A]">
+            <p className="text-xs font-bold uppercase tracking-[3px] text-[var(--accent)]">
               Casagrand Casablanca
             </p>
 

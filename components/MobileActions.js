@@ -17,7 +17,7 @@ const MobileActions = () => {
         <button
           type="button"
           onClick={openLeadForm}
-          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-white transition active:scale-95"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[var(--secondary-2)] px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-white transition active:scale-95"
         >
           <Phone size={18} />
           Call Us
@@ -26,7 +26,7 @@ const MobileActions = () => {
         <button
           type="button"
           onClick={openLeadForm}
-          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-black transition active:scale-95"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-white transition active:scale-95"
         >
           <MessageSquare size={18} />
           Get A Quote

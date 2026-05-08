@@ -27,7 +27,7 @@ const Clubhouse = () => {
       />
 
       {/* Multi-layered Overlays */}
-      <div className="absolute inset-0 bg-zinc-950/10 z-1" />
+      <div className="absolute inset-0 bg-[var(--secondary-1)]/10 z-1" />
       <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/10 to-transparent z-2" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -42,7 +42,7 @@ const Clubhouse = () => {
             <h2 className="section-title section-title-on-dark mb-6">
               42,000 Sq.ft Clubhouse. <br />
               26,000 Sq.ft{" "}
-              <span className="text-amber-500 italic">Sports Clubhouse.</span>
+              <span className="text-[var(--accent)] italic">Sports Clubhouse.</span>
             </h2>
 
             <p className="section-copy section-copy-on-dark mb-8 max-w-2xl font-medium">
@@ -63,10 +63,10 @@ const Clubhouse = () => {
                   transition={{ delay: 0.2 + index * 0.1 }}
                   className="flex items-center space-x-4 group cursor-default"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
-                  <span className="text-white font-bold text-sm md:text-base group-hover:text-amber-400 transition-colors">
+                  <span className="text-white font-bold text-sm md:text-base group-hover:text-[var(--accent)] transition-colors">
                     {feature.text}
                   </span>
                 </motion.div>
@@ -89,7 +89,7 @@ const Clubhouse = () => {
       </div>
 
       {/* Decorative side accent */}
-      <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-amber-500/5 to-transparent pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-[var(--accent)]/5 to-transparent pointer-events-none" />
     </section>
   );
 };

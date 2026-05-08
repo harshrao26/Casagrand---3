@@ -11,9 +11,9 @@ const VirtualTour360 = () => {
     return (
         <section
             id="virtual-tour"
-            className="relative overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
+            className="relative overflow-hidden bg-[var(--secondary-1)] px-4 py-16 md:py-24"
         >
-            <div className="absolute left-1/2 top-0 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[150px]" />
+            <div className="absolute left-1/2 top-0 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-[var(--accent)]/10 blur-[150px]" />
             <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/5 blur-[120px]" />
 
             <div className="relative z-10 mx-auto max-w-7xl">
@@ -24,14 +24,14 @@ const VirtualTour360 = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
                     >
-                        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
+                        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[var(--accent)]">
                             <Eye size={14} />
                             360° Virtual Tour
                         </span>
 
                         <h2 className="section-title section-title-on-dark">
                             Experience Casablanca in{" "}
-                            <span className="text-[#FCB33A]">360° View</span>
+                            <span className="text-[var(--accent)]">360° View</span>
                         </h2>
                     </motion.div>
 
@@ -67,7 +67,7 @@ const VirtualTour360 = () => {
 
                         <div className="pointer-events-none absolute inset-x-0 top-0 bg-gradient-to-b from-black/50 to-transparent p-5 md:p-6">
                             <div className="inline-flex items-center gap-2 rounded-full bg-black/45 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-white backdrop-blur-md">
-                                <RotateCcw size={14} className="text-[#FCB33A]" />
+                                <RotateCcw size={14} className="text-[var(--accent)]" />
                                 Drag to Explore
                             </div>
                         </div>
@@ -80,18 +80,18 @@ const VirtualTour360 = () => {
                         href="https://onetobeam.com/virtual_tours/casagrand_Casablanca/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FCB33A]/40 hover:bg-[#FCB33A]/10"
+                        className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/10"
                     >
-                        <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FCB33A]/10 blur-2xl transition group-hover:bg-[#FCB33A]/20" />
+                        <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[var(--accent)]/10 blur-2xl transition group-hover:bg-[var(--accent)]/20" />
 
                         <div className="relative z-10 flex items-center justify-between gap-5">
                             <div className="flex items-center gap-4">
-                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCB33A]/10 text-[#FCB33A] transition-all duration-300 group-hover:bg-[#FCB33A] group-hover:text-black">
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--accent)]/10 text-[var(--accent)] transition-all duration-300 group-hover:bg-[var(--accent)] group-hover:text-black">
                                     <Maximize2 size={24} />
                                 </div>
 
                                 <div>
-                                    <p className="text-xs font-bold uppercase tracking-[2px] text-[#FCB33A]">
+                                    <p className="text-xs font-bold uppercase tracking-[2px] text-[var(--accent)]">
                                         360° Experience
                                     </p>
                                     <h3 className="mt-1 text-xl font-extrabold text-white">
@@ -100,7 +100,7 @@ const VirtualTour360 = () => {
                                 </div>
                             </div>
 
-                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 group-hover:border-[#FCB33A] group-hover:bg-[#FCB33A] group-hover:text-black">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-black">
                                 <Maximize2 size={18} />
                             </div>
                         </div>
@@ -110,9 +110,9 @@ const VirtualTour360 = () => {
                     <button
                         type="button"
                         onClick={openLeadForm}
-                        className="group relative overflow-hidden rounded-3xl bg-[#FCB33A] p-5 text-left text-black transition-all duration-300 hover:-translate-y-1 hover:bg-white"
+                        className="group relative overflow-hidden rounded-3xl bg-[var(--accent)] p-5 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--accent-hover)]"
                     >
-                        <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-black/10 blur-2xl transition group-hover:bg-[#FCB33A]/20" />
+                        <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-black/10 blur-2xl transition group-hover:bg-[var(--accent)]/20" />
 
                         <div className="relative z-10 flex items-center justify-between gap-5">
                             <div>
@@ -125,7 +125,7 @@ const VirtualTour360 = () => {
                                 </h3>
                             </div>
 
-                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black text-white transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#FCB33A] group-hover:text-black">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--secondary-1)] text-white transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[var(--secondary-2)]">
                                 <ArrowRight size={22} />
                             </div>
                         </div>

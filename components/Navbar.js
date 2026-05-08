@@ -62,7 +62,7 @@ const Navbar = () => {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FCB33A] hover:shadow-sm"
+                  className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[var(--accent)] hover:shadow-sm"
                 >
                   {link.label}
                 </a>
@@ -73,12 +73,12 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-3 lg:flex">
             <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
-              <MapPin size={15} className="text-[#FCB33A]" />
+              <MapPin size={15} className="text-[var(--accent)]" />
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
-                className="transition hover:text-[#FCB33A]"
+                className="transition hover:text-[var(--accent)]"
               >
                 Bengaluru
               </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={openLeadForm}
-              className="inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--accent-hover)]"
             >
               <Phone size={16} />
               Request A Call
@@ -116,7 +116,7 @@ const Navbar = () => {
       >
         <div className="relative flex min-h-dvh flex-col overflow-hidden bg-white p-6">
           {/* Soft Background Effects */}
-          <div className="pointer-events-none absolute -right-24 top-16 h-72 w-72 rounded-full bg-[#FCB33A]/15 blur-[90px]" />
+          <div className="pointer-events-none absolute -right-24 top-16 h-72 w-72 rounded-full bg-[var(--accent)]/15 blur-[90px]" />
           <div className="pointer-events-none absolute -left-24 bottom-28 h-72 w-72 rounded-full bg-zinc-200/60 blur-[90px]" />
 
           {/* Top Bar */}
@@ -127,7 +127,7 @@ const Navbar = () => {
               type="button"
               onClick={closeMenu}
               aria-label="Close menu"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-950 shadow-sm transition hover:bg-[#FCB33A] hover:text-black"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-950 shadow-sm transition hover:bg-[var(--accent)] hover:text-black"
             >
               <X size={24} />
             </button>
@@ -143,7 +143,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={closeMenu}
-                    className="group flex items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-lg font-semibold text-zinc-950 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition hover:border-[#FCB33A]/50 hover:bg-[#FCB33A] hover:text-black"
+                    className="group flex items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-lg font-semibold text-zinc-950 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition hover:border-[var(--accent)]/50 hover:bg-[var(--accent)] hover:text-black"
                   >
                     <span>{link.label}</span>
 
@@ -160,7 +160,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={openMobileLeadForm}
-            className="relative z-10 mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-black shadow-[0_18px_50px_rgba(252,179,58,0.25)] transition active:scale-95"
+            className="relative z-10 mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white shadow-[0_18px_50px_rgba(168,117,34,0.25)] transition active:scale-95"
           >
             <Phone size={18} />
             Book Site Visit

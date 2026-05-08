@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const ThankYouPage = () => {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-4 py-10">
-       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FCB33A]/20 blur-[140px]" />
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--primary-1)] px-4 py-10">
+       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[var(--accent)]/20 blur-[140px]" />
 
       <section className="relative z-10 mx-auto w-full max-w-3xl text-center">
-        <div className="mx-auto mb-7 flex h-24 w-24 items-center justify-center rounded-full bg-[#FCB33A]/15 text-[#FCB33A]">
+        <div className="mx-auto mb-7 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--accent)]/15 text-[var(--accent)]">
           <CheckCircle2 size={52} />
         </div>
 
@@ -36,7 +36,7 @@ const ThankYouPage = () => {
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <Link
             href="/"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 px-7 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[#FCB33A] hover:text-black"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--secondary-1)] px-7 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[var(--accent)]"
           >
             <Home size={18} />
             Back to Home

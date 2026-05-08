@@ -17,7 +17,7 @@ const Footer = () => {
 ];
 
   return (
-    <footer className="bg-zinc-900 text-white pt-12 md:pt-20 pb-10">
+    <footer className="bg-[var(--secondary-1)] text-white pt-12 md:pt-20 pb-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
           
@@ -32,13 +32,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Quick Links</h3>
+            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-[var(--accent)]">Quick Links</h3>
             <ul className="space-y-4">
   {footerLinks.map((item, index) => (
     <li key={index}>
       <a
         href={item.href}
-        className="text-white transition-colors hover:text-[#FCB33A]"
+        className="text-white transition-colors hover:text-[var(--accent)]"
       >
         {item.label}
       </a>
@@ -49,15 +49,15 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Contact Us</h3>
+            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-[var(--accent)]">Contact Us</h3>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
-                <MapPin className="text-amber-600 shrink-0 mt-1" size={20} />
+                <MapPin className="text-[var(--accent)] shrink-0 mt-1" size={20} />
                 <span className="text-white">Vallakkottai, Oragadam, Chennai, Tamil Nadu 602105</span>
               </li>
               
               <li className="flex items-center space-x-4">
-                <Mail className="text-amber-600 shrink-0" size={20} />
+                <Mail className="text-[var(--accent)] shrink-0" size={20} />
                 <a href="mailto:info@casagrand.com" className="text-white hover:text-white transition-colors">info@casagrand.com</a>
               </li>
             </ul>

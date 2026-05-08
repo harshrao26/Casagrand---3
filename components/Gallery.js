@@ -28,7 +28,7 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            A Visual <span className="text-amber-500">Symphony.</span>
+            A Visual <span className="text-[var(--accent)]">Symphony.</span>
           </motion.h2>
           <p className="section-copy max-w-2xl mx-auto">
             Take a glimpse into the life that awaits you at Casagrand Casablanca. 

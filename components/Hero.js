@@ -56,14 +56,14 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] ease-out"
+          className="absolute saturate-130 inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] ease-out"
           style={{
             backgroundImage: "url('/prop/Copy of Main Entrance.webp')",
           }}
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" /> */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/20" />
       </div>
 
@@ -73,7 +73,7 @@ const Hero = () => {
           <form className="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-center" onSubmit={handleSubmit}>
             {/* Name */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <User className="h-5 w-5 shrink-0 text-[#FCB33A]" />
+              <User className="h-5 w-5 shrink-0 text-[var(--accent)]" />
               <input
                 type="text"
                 name="name"
@@ -85,7 +85,7 @@ const Hero = () => {
 
             {/* Mobile */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <Phone className="h-5 w-5 shrink-0 text-[#FCB33A]" />
+              <Phone className="h-5 w-5 shrink-0 text-[var(--accent)]" />
               <input
                 type="tel"
                 name="mobile"
@@ -100,7 +100,7 @@ const Hero = () => {
 
             {/* Email */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <Mail className="h-5 w-5 shrink-0 text-[#FCB33A]" />
+              <Mail className="h-5 w-5 shrink-0 text-[var(--accent)]" />
               <input
                 type="email"
                 name="email"
@@ -116,7 +116,7 @@ const Hero = () => {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="flex items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-black transition hover:bg-zinc-950 hover:text-white"
+              className="flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-white transition hover:bg-[var(--accent-hover)]"
             >
               <Send className="h-4 w-4" />
               {status === "submitting" ? "Submitting..." : "Enquire Now"}

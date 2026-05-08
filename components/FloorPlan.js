@@ -58,7 +58,7 @@ const FloorPlan = () => {
            
 
           <h2 className="section-title">
-            Floor <span className="text-amber-500">Plans</span>
+            Floor <span className="text-[var(--accent)]">Plans</span>
           </h2>
 
           <p className="section-copy mt-3 max-w-xl mx-auto">
@@ -74,8 +74,8 @@ const FloorPlan = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-4 md:px-5 py-2 rounded-xl transition-all duration-300 text-sm font-medium border ${
                 activeTab === tab
-                  ? "bg-amber-500 text-white border-amber-500"
-                  : "bg-white text-zinc-700 border-zinc-200 hover:border-amber-400 hover:text-amber-500"
+                  ? "bg-[var(--accent)] text-white border-[var(--accent)]"
+                  : "bg-white text-zinc-700 border-zinc-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
               }`}
             >
               {tab}
@@ -137,7 +137,7 @@ const FloorPlan = () => {
                         </h4>
                       </div>
 
-                      <div className="bg-amber-500 rounded-2xl p-4">
+                      <div className="bg-[var(--secondary-2)] rounded-2xl p-4">
                         <p className="text-[10px] uppercase tracking-[2px] text-white/70 mb-1">
                           Total Area
                         </p>

@@ -11,20 +11,20 @@ const Contact = () => {
       id="contact-us"
     >
       {/* Background Effects */}
-      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full md:bg-[#FCB33A]/10 bg-white blur-[130px]" />
+      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full md:bg-[var(--accent)]/10 bg-white blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/80 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl ">
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           {/* Left Content */}
           <div className="rounded-[36px] border border-zinc-200/70 bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)] md:p-8 lg:p-10">
-            <span className="mb-5 md:inline-flex hidden px-4  items-center gap-2 rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10  py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
+            <span className="mb-5 md:inline-flex hidden px-4  items-center gap-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/10  py-2 text-xs font-semibold uppercase tracking-[2px] text-[var(--accent)]">
               <CalendarCheck size={14} />
               Schedule Site Visit
             </span>
 
             <h2 className="section-title text-zinc-950">
-              Book Your <span className="text-[#FCB33A]">Site Visit</span> Now
+              Book Your <span className="text-[var(--accent)]">Site Visit</span> Now
             </h2>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-600 md:text-base">
@@ -36,8 +36,8 @@ const Contact = () => {
             <div className="mt-8 space-y-4">
               
 
-              <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[#FCB33A]/30 hover:bg-[#FCB33A]/5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#FCB33A] shadow-sm transition group-hover:bg-[#FCB33A] group-hover:text-white">
+              <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[var(--accent)] shadow-sm transition group-hover:bg-[var(--accent)] group-hover:text-white">
                   <Mail size={23} />
                 </div>
 
@@ -51,8 +51,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[#FCB33A]/30 hover:bg-[#FCB33A]/5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#FCB33A] shadow-sm transition group-hover:bg-[#FCB33A] group-hover:text-white">
+              <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[var(--accent)] shadow-sm transition group-hover:bg-[var(--accent)] group-hover:text-white">
                   <MapPin size={23} />
                 </div>
 
@@ -70,7 +70,7 @@ const Contact = () => {
 
           {/* Form Card */}
           <div className="relative">
-            <div className="absolute -inset-4 rounded-[44px] bg-[#FCB33A]/10 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[44px] bg-[var(--accent)]/10 blur-2xl" />
 
             <div className="relative rounded-[36px] border border-zinc-200/70 bg-white p-6 text-zinc-950 shadow-[0_30px_100px_rgba(0,0,0,0.12)] md:rounded-[44px] md:p-8 lg:p-10">
               <div className="mb-7 text-center md:text-left ">

@@ -41,7 +41,7 @@ const Overview = () => {
   return (
     <section
       id="overview"
-      className="relative mx-auto my-10 max-w-7xl overflow-hidden bg-white px-4 md:my-14"
+      className="relative mx-auto my-10 max-w-7xl overflow-hidden bg-  px-4 md:my-14"
     >
  
       <div className="relative z-10 mx-auto">
@@ -59,7 +59,7 @@ const Overview = () => {
               <h3 className="section-title mb-7">
                 Roman-Inspired Luxury Living <br />
                 at{" "}
-                <span className="text-[#FCB33A] text-outline">
+                <span className="text-[var(--accent)] text-outline">
                   Casagrand Casablanca.
                 </span>
               </h3>
@@ -92,7 +92,7 @@ const Overview = () => {
                   className="flex items-start gap-3 rounded-2xl border border-zinc-100 bg-zinc-50 p-4"
                 >
                   <CheckCircle2
-                    className="mt-0.5 shrink-0 text-[#FCB33A]"
+                    className="mt-0.5 shrink-0 text-[var(--accent)]"
                     size={20}
                   />
                   <span className="text-sm font-semibold leading-6 text-zinc-800">
@@ -128,7 +128,7 @@ const Overview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
           >
-            <div className="absolute -inset-4 rounded-[40px] bg-[#FCB33A]/10 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[40px] bg-[var(--accent)]/10 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-[36px] border border-zinc-100 bg-white p-3  -[0_30px_100px_rgba(0,0,0,0.12)]">
               <img

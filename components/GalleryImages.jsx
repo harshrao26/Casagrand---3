@@ -21,21 +21,21 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="relative  overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
+      className="relative  overflow-hidden bg-[var(--secondary-1)] px-4 py-16 md:py-24"
     >
       {/* Background */}
-      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[140px]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent,rgba(252,179,58,0.04))]" />
+      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[var(--accent)]/10 blur-[140px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent,rgba(168,117,34,0.04))]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4  ">
         {/* Header */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span className="mb-4 inline-flex rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
+          <span className="mb-4 inline-flex rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[var(--accent)]">
             Indoor Gallery
           </span>
 
           <h2 className="section-title section-title-on-dark">
-            Designed Spaces, <span className="text-[#FCB33A]">Captured</span>
+            Designed Spaces, <span className="text-[var(--accent)]">Captured</span>
           </h2>
 
           <p className="section-copy-on-dark mx-auto mt-4 max-w-2xl">
@@ -61,7 +61,7 @@ const Gallery = () => {
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[2px] text-[#FCB33A]">
+              <p className="text-sm font-semibold uppercase tracking-[2px] text-[var(--accent)]">
                 Premium Interior
               </p>
 
@@ -128,7 +128,7 @@ const Gallery = () => {
           <button
             type="button"
             onClick={openLeadForm}
-            className="mt-5 inline-flex rounded-full bg-[#FCB33A] px-7 py-3 text-sm font-semibold text-black transition hover:bg-white"
+            className="mt-5 inline-flex rounded-full bg-[var(--accent)] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-hover)]"
           >
             Enquire Now
           </button>
