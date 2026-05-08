@@ -1,6 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import MobileActions from "@/components/MobileActions";
+
 import { LeadFormProvider } from "@/components/LeadFormContext";
 
 const montserrat = Montserrat({
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-montserrat">
         <LeadFormProvider>
           {children}
-          <MobileActions />
+
         </LeadFormProvider>
       </body>
     </html>

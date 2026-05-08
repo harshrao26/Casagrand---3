@@ -57,7 +57,7 @@ const VirtualTour360 = () => {
                 >
                     <div className="relative h-[420px] overflow-hidden rounded-[30px] bg-black md:h-[640px]">
                         <iframe
-                            src="https://onetobeam.com/virtual_tours/Casagrand_Casablanca/"
+                            src="https://onetobeam.com/virtual_tours/casagrand_Casablanca/"
                             title="Casagrand Casablanca 360 Virtual Tour"
                             className="h-full w-full"
                             allowFullScreen

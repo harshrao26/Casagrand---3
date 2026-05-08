@@ -1,12 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, User, Send } from "lucide-react";
-import { useLeadForm } from "./LeadFormContext";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const { openLeadForm } = useLeadForm();
+  const router = useRouter();
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("submitting");
+    setMessage("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      mobile: String(formData.get("mobile") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+    };
+
+    try {
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "Unable to submit inquiry.");
+      }
+
+      form.reset();
+      setStatus("success");
+      setMessage("Thank you. Our team will contact you shortly.");
+      router.push("/thankyou");
+    } catch (error) {
+      setStatus("error");
+      setMessage(error.message || "Unable to submit inquiry. Please try again.");
+    }
+  };
 
   return (
     <section className="relative min-h-[72vh] w-full overflow-hidden pt-20 md:h-[90vh]">
@@ -27,14 +67,16 @@ const Hero = () => {
       {/* Bottom Horizontal Form */}
       <div className="absolute inset-x-0 bottom-0 z-20 px-4 pb-5 md:pb-8">
         <div className="mx-auto max-w-4xl rounded-[28px] border border-white/20 bg-white/95 p-4 shadow-[0_24px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl md:rounded-full md:p-3">
-          <div className="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-center">
+          <form className="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-center" onSubmit={handleSubmit}>
             {/* Name */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
               <User className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 className="w-full bg-transparent text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
+                required
               />
             </div>
 
@@ -43,8 +85,10 @@ const Hero = () => {
               <Phone className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="tel"
+                name="mobile"
                 placeholder="Mobile Number"
                 className="w-full bg-transparent text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
+                required
               />
             </div>
 
@@ -53,21 +97,28 @@ const Hero = () => {
               <Mail className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
                 className="w-full bg-transparent text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
+                required
               />
             </div>
 
             {/* Button */}
             <button
-              type="button"
-              onClick={openLeadForm}
+              type="submit"
+              disabled={status === "submitting"}
               className="flex items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-black transition hover:bg-zinc-950 hover:text-white"
             >
               <Send className="h-4 w-4" />
-              Enquire Now
+              {status === "submitting" ? "Submitting..." : "Enquire Now"}
             </button>
-          </div>
+          </form>
+          {message ? (
+            <p className={`mt-3 text-center text-xs font-semibold ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+              {message}
+            </p>
+          ) : null}
         </div>
       </div>
 

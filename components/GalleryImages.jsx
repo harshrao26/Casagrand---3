@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
+import { useLeadForm } from "./LeadFormContext";
 
 const Gallery = () => {
+  const { openLeadForm } = useLeadForm();
+
   const images = [
     "/indoor-images/image.png",
     "/indoor-images/image copy.png",
@@ -120,12 +125,13 @@ const Gallery = () => {
             available plot options.
           </p>
 
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={openLeadForm}
             className="mt-5 inline-flex rounded-full bg-[#FCB33A] px-7 py-3 text-sm font-semibold text-black transition hover:bg-white"
           >
             Enquire Now
-          </a>
+          </button>
         </div>
       </div>
     </section>

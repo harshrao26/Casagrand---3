@@ -42,71 +42,73 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${
-        scrolled
-          ? "border-zinc-200 bg-white/95 py-3 shadow-sm backdrop-blur-xl"
-          : "border-zinc-200 bg-white/90 py-4 backdrop-blur-xl"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
-          <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
-        </a>
+    <>
+      <nav
+        className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${
+          scrolled
+            ? "border-zinc-200 bg-white/95 py-3 shadow-sm backdrop-blur-xl"
+            : "border-zinc-200 bg-white/90 py-4 backdrop-blur-xl"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+          {/* Logo */}
+          <a href="#" className="flex items-center gap-3">
+            <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
+          </a>
 
-        {/* Desktop Links */}
-        <ul className="hidden items-center gap-1 rounded-full bg-zinc-100 p-1 lg:flex">
-          {links.map((link) => (
-            <li key={link.label}>
+          {/* Desktop Links */}
+          <ul className="hidden items-center gap-1 rounded-full bg-zinc-100 p-1 lg:flex">
+            {links.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FCB33A] hover:shadow-sm"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop CTA */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
+              <MapPin size={15} className="text-[#FCB33A]" />
               <a
-                href={link.href}
-                className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FCB33A] hover:shadow-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+                className="transition hover:text-[#FCB33A]"
               >
-                {link.label}
+                Bengaluru
               </a>
-            </li>
-          ))}
-        </ul>
+            </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
-            <MapPin size={15} className="text-[#FCB33A]" />
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
-              className="transition hover:text-[#FCB33A]"
+            <button
+              type="button"
+              onClick={openLeadForm}
+              className="inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
             >
-              Bengaluru
-            </a>
+              <Phone size={16} />
+              Call Now
+            </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            onClick={openLeadForm}
-            className="inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 lg:hidden"
           >
-            <Phone size={16} />
-            Call Now
+            <Menu size={22} />
           </button>
         </div>
+      </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          onClick={() => setIsOpen(true)}
-          aria-label="Open menu"
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 lg:hidden"
-        >
-          <Menu size={22} />
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu — rendered outside <nav> to escape its stacking context */}
       <div
-        className={`fixed inset-0 z-[1000000000000000] overflow-y-auto bg-white transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[9999] overflow-y-auto bg-white transition-all duration-300 lg:hidden ${
           isOpen
             ? "visible translate-x-0 opacity-100"
             : "invisible translate-x-full opacity-0"
@@ -131,34 +133,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Project Card */}
-          <div className="relative z-10 mb-8 overflow-hidden rounded-[32px] border border-zinc-200 bg-white p-5 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
-            <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[#FCB33A]/15 blur-2xl" />
-
-            <div className="relative z-10">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FCB33A]/15 text-[#FCB33A]">
-                <Home size={22} />
-              </div>
-
-              <p className="text-xs font-bold uppercase tracking-[2px] text-[#FCB33A]">
-                Casagrand Casablanca
-              </p>
-
-              <h3 className="mt-2 text-2xl font-semibold leading-tight text-zinc-950">
-                Premium living in Bengaluru
-              </h3>
-
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
-                className="mt-4 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:border-[#FCB33A]/40 hover:bg-[#FCB33A]/10 hover:text-[#FCB33A]"
-              >
-                <MapPin size={14} className="text-[#FCB33A]" />
-                Bengaluru
-              </a>
-            </div>
-          </div>
+         
 
           {/* Mobile Links */}
           <ul className="relative z-10 space-y-3">
@@ -192,7 +167,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

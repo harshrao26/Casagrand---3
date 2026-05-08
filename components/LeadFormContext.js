@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState } from "react";
 import { Mail, Phone, Send, User, X, MapPin } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const LeadFormContext = createContext(null);
 
@@ -16,6 +17,7 @@ export const useLeadForm = () => {
 };
 
 export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
+  const router = useRouter();
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
 
@@ -51,6 +53,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
       setStatus("success");
       setMessage("Thank you. Our team will contact you shortly.");
       onSubmit?.();
+      router.push("/thankyou");
     } catch (error) {
       setStatus("error");
       setMessage(error.message || "Unable to submit inquiry. Please try again.");
@@ -190,7 +193,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
               Casagrand Casablanca
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-zinc-950 md:text-3xl">
+            <h2 className="mt-3 text-2xl font-extrabold leading-tight text-zinc-950 md:text-3xl">
               Book Your Site Visit
             </h2>
 
