@@ -90,7 +90,7 @@ const Navbar = () => {
               className="inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
             >
               <Phone size={16} />
-              Call Now
+              Request A Call
             </button>
           </div>
 

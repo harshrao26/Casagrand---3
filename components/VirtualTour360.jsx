@@ -77,7 +77,7 @@ const VirtualTour360 = () => {
                 <div className="mt-6 grid gap-4 md:grid-cols-2">
                     {/* Full Screen Tour */}
                     <a
-                        href="https://onetobeam.com/virtual_tours/Casagrand_Casablanca/"
+                        href="https://onetobeam.com/virtual_tours/casagrand_Casablanca/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FCB33A]/40 hover:bg-[#FCB33A]/10"

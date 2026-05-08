@@ -55,7 +55,7 @@ const Location = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-full w-full grayscale contrast-125"
+              className="h-full w-full   contrast-125"
             />
 
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-transparent to-transparent" />

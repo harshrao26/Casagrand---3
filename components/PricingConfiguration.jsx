@@ -76,7 +76,7 @@ const PricingConfiguration = () => {
     return (
       <div className="mb-12 md:mb-16">
         <div className="mb-6 flex items-center justify-center">
-          <h3 className="rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10 px-6 py-3 text-center text-lg font-bold tracking-wide text-white md:text-2xl">
+          <h3 className="rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10 px-6 py-3 text-center text-sm font-bold tracking-wide text-white md:text-2xl">
             {title}
           </h3>
         </div>
@@ -110,7 +110,7 @@ const PricingConfiguration = () => {
                   key={index}
                   className="transition duration-300 hover:bg-[#FCB33A]/10"
                 >
-                  <td className="border border-white/10 px-5 py-5 text-base font-semibold text-white">
+                  <td className="border  border-white/10 px-5 py-5 text-base font-semibold text-white">
                     {item.bhk}
                   </td>
 
@@ -154,7 +154,7 @@ const PricingConfiguration = () => {
                     Configuration
                   </p>
 
-                  <h4 className="mt-1 text-2xl font-bold text-white">
+                  <h4 className="mt-1 text-xl font-bold text-white">
                     {item.bhk}
                   </h4>
                 </div>
@@ -244,7 +244,7 @@ const PricingConfiguration = () => {
         </div>
 
         {renderPricingTable("Apartments - Phase 2", phase2)}
-        {renderPricingTable("Apartments - Phase 1", phase1)}
+        {/* {renderPricingTable("Apartments - Phase 1", phase1)} */}
 
         <div className="mx-auto max-w-2xl rounded-full border border-white/10 bg-white/[0.04] px-5 py-4 text-center backdrop-blur-xl">
           <p className="text-xs font-bold uppercase tracking-[1.5px] text-zinc-400 md:text-sm">

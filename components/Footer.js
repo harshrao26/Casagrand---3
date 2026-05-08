@@ -63,31 +63,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter / Disclaimer */}
-          <div>
-            <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Legal</h3>
-            <p className="text-white text-sm leading-relaxed mb-6">
-              *Disclaimer: The information provided in this website is for guidance only. Prices and availability are subject to change without notice.
-            </p>
-            <ul className="space-y-2 mb-6 text-sm">
-              <li><a href="https://casagrandcasablanca.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="https://casagrandcasablanca.com/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Terms & Conditions</a></li>
-            </ul>
-            <div className="p-4 border border-zinc-800 rounded-lg">
-              <p className="text-xs text-zinc-500">
-                RERA Number: <br />
-                <span className="text-zinc-300 font-mono">PRM/KA/RERA/1251/310/PR/040524/006862</span>
-              </p>
-            </div>
-          </div>
+        
 
         </div>
 
         <div className="pt-10 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-sm">
           <p>© {currentYear} Casagrand Builder Pvt. Ltd. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="https://casagrandcasablanca.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="https://casagrandcasablanca.com/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms & Conditions</a>
+            <a href="https://www.casagrand.co.in/new-privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="https://www.casagrand.co.in/terms-and-condition/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms & Conditions</a>
           </div>
         </div>
       </div>

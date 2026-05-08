@@ -29,7 +29,7 @@ const MobileActions = () => {
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-black transition active:scale-95"
         >
           <MessageSquare size={18} />
-          Enquire
+          Get A Quote
         </button>
       </div>
     </div>

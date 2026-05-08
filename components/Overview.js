@@ -41,7 +41,7 @@ const Overview = () => {
   return (
     <section
       id="overview"
-      className="relative mx-auto my-20 max-w-7xl overflow-hidden bg-white px-4 md:my-28"
+      className="relative mx-auto my-10 max-w-7xl overflow-hidden bg-white px-4 md:my-14"
     >
  
       <div className="relative z-10 mx-auto">
