@@ -1,9 +1,136 @@
 "use client";
 
-import React from "react";
-import { Download, CheckCircle2, Building2, Trees, Club, Home } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import {
+  Download,
+  CheckCircle2,
+  Building2,
+  Trees,
+  Club,
+  Home,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { useLeadForm } from "./LeadFormContext";
+
+const galleryImages = [
+  {
+    src: "/prop/Copy of Aerial Night.webp",
+    tag: "Aerial View",
+    title: "Grand Night-Time Community View",
+    desc: "A beautifully planned Roman-inspired residential community with elegant lighting and premium open spaces.",
+  },
+  {
+    src: "/prop/Copy of Clubhouse Dusk.webp",
+    tag: "Luxury Clubhouse",
+    title: "Roman-Inspired Clubhouse",
+    desc: "Premium lifestyle spaces crafted for recreation, wellness, celebrations, and grand community experiences.",
+  },
+  {
+    src: "/prop/Copy of Main Entrance.webp",
+    tag: "Grand Arrival",
+    title: "Iconic Main Entrance",
+    desc: "A statement arrival experience designed with timeless architecture and a luxurious first impression.",
+  },
+  {
+    src: "/prop/Copy of Podium Dusk (1).webp",
+    tag: "Podium Lifestyle",
+    title: "Elevated Podium Spaces",
+    desc: "Beautifully designed leisure zones with landscaped decks, outdoor seating, and refined community areas.",
+  },
+   
+];
+
+const OverviewImageStack = () => {
+  const [cards, setCards] = useState(galleryImages);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCards((prev) => {
+        const [first, ...rest] = prev;
+        return [...rest, first];
+      });
+    }, 2400);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative mx-auto h-[430px] w-full max-w-[620px] sm:h-[500px] lg:h-[560px]">
+      {cards.slice(0, 3).map((card, index) => {
+        const isFront = index === 0;
+
+        const positions = [
+          {
+            x: 0,
+            y: 92,
+            rotate: 2,
+            scale: 1,
+            opacity: 1,
+            zIndex: 30,
+          },
+          {
+            x: 58,
+            y: 42,
+            rotate: 2,
+            scale: 0.94,
+            opacity: 0.72,
+            zIndex: 20,
+          },
+          {
+            x: 118,
+            y: 0,
+            rotate: 2,
+            scale: 0.88,
+            opacity: 0.5,
+            zIndex: 10,
+          },
+        ];
+
+        return (
+          <motion.div
+            key={card.src}
+            className="absolute left-0 top-0 h-[315px] w-[88%] overflow-hidden rounded-[26px] bg-zinc-900 shad ow-[0_35px_90px_rgba(0,0,0,0.28)] sm:h-[390px] lg:h-[430px]"
+            animate={positions[index]}
+            transition={{
+              duration: 0.85,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
+            <img
+              src={card.src}
+              alt={card.title}
+              className="h-full w-full object-cover"
+            />
+
+            {/* <div className="absolute inset-0 bg-black/30" /> */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030614]/95 via-[#030614]/35 to-black/10" />
+
+            {isFront && (
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55 }}
+                className="absolute bottom-8 left-6 right-6 text-white sm:bottom-10 sm:left-8 sm:right-8"
+              >
+                
+
+                {/* <span className="mb-3 inline-flex rounded-full bg-white/15 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[2px] text-white/90 backdrop-blur-md">
+                  {card.tag}
+                </span> */}
+
+                <h4 className="max-w-[480px] text-xl font-bold leading-tight tracking-[-0.5px] text-white lg:text-2xl ">
+                  {card.title}
+                </h4>
+
+               
+              </motion.div>
+            )}
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+};
 
 const Overview = () => {
   const { openLeadForm } = useLeadForm();
@@ -41,12 +168,10 @@ const Overview = () => {
   return (
     <section
       id="overview"
-      className="relative mx-auto my-10 max-w-7xl overflow-hidden bg-  px-4 md:my-14"
+      className="relative mx-auto my-10 max-w-7xl overflow-hidden px-4 md:my-14"
     >
- 
       <div className="relative z-10 mx-auto">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -45 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,8 +226,7 @@ const Overview = () => {
                 </div>
               ))}
             </div>
-
-           
+ 
 
             <div className="flex flex-col items-center gap-5 sm:flex-row">
               <button
@@ -114,31 +238,20 @@ const Overview = () => {
                 <span>Download Brochure</span>
               </button>
 
-              <p className="text-center text-xs font-mono leading-5 text-zinc-400 sm:text-left">
+              <p className="text-center font-mono text-xs leading-5 text-zinc-400 sm:text-left">
                 PRM/KA/RERA/1251/310/PR/040524/006862
               </p>
             </div>
           </motion.div>
 
-          {/* Image */}
           <motion.div
-            className="relative"
+            className="relative overflow-visible"
             initial={{ opacity: 0, x: 45 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
           >
-            <div className="absolute -inset-4 rounded-[40px] bg-[var(--accent)]/10 blur-2xl" />
-
-            <div className="relative overflow-hidden rounded-[36px] border border-zinc-100 bg-white    -[0_30px_100px_rgba(0,0,0,0.12)]">
-              <img
-                src="/prop/Copy of Clubhouse Dusk.webp"
-                alt="Casagrand Casablanca Overview"
-                className="h-auto w-full rounded-[28px] object-cover transition-transform duration-700 hover:scale-105"
-              />
-
-               
-            </div>
+            <OverviewImageStack />
           </motion.div>
         </div>
       </div>
