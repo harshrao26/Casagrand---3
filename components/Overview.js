@@ -130,9 +130,9 @@ const Overview = () => {
           >
             <div className="absolute -inset-4 rounded-[40px] bg-[var(--accent)]/10 blur-2xl" />
 
-            <div className="relative overflow-hidden rounded-[36px] border border-zinc-100 bg-white p-3  -[0_30px_100px_rgba(0,0,0,0.12)]">
+            <div className="relative overflow-hidden rounded-[36px] border border-zinc-100 bg-white    -[0_30px_100px_rgba(0,0,0,0.12)]">
               <img
-                src="/assets/intro.webp"
+                src="/prop/Copy of Clubhouse Dusk.webp"
                 alt="Casagrand Casablanca Overview"
                 className="h-auto w-full rounded-[28px] object-cover transition-transform duration-700 hover:scale-105"
               />

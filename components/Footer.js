@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[var(--secondary-1)] text-white pt-12 md:pt-20 pb-10">
-      <div className="container mx-auto px-4">
+      <div className=" max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
           
           {/* Brand Column */}
@@ -53,12 +53,12 @@ const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-[var(--accent)] shrink-0 mt-1" size={20} />
-                <span className="text-white">Vallakkottai, Oragadam, Chennai, Tamil Nadu 602105</span>
+                <span className="text-white">Holiday Village Rd, Vakil Garden City, Mallasandra, Karnataka 560109</span>
               </li>
               
               <li className="flex items-center space-x-4">
                 <Mail className="text-[var(--accent)] shrink-0" size={20} />
-                <a href="mailto:info@casagrand.com" className="text-white hover:text-white transition-colors">info@casagrand.com</a>
+                <a href="mailto:info@casagrandcasablanca.com" className="text-white hover:text-white transition-colors">info@casagrandcasablanca.com</a>
               </li>
             </ul>
           </div>
