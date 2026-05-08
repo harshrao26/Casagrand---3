@@ -17,9 +17,9 @@ const Navbar = () => {
 
   const links = [
     { label: "Overview", href: "#overview" },
-    { label: "Communities", href: "#communities" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Floor Plan", href: "#floorplan" },
+     { label: "Gallery", href: "#gallery" },
+    { label: "Amenities", href: "#amenities" },
+    { label: "Pricing", href: "#pricing" },
     { label: "Location", href: "#location" },
   ];
 
@@ -61,7 +61,9 @@ const Navbar = () => {
         <div className="hidden items-center gap-3 lg:flex">
           <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
             <MapPin size={15} className="text-[#FD9A00]" />
-            Bengaluru
+            <a target="blank" href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed">
+              Bengaluru
+            </a>
           </div>
 
           <button
@@ -85,10 +87,10 @@ const Navbar = () => {
 
       <div
         className={`fixed inset-0 z-[999] bg-[#faf7f1] transition-opacity duration-300 lg:hidden ${
-          isOpen ? "visible opacity-100" : "invisible opacity-0"
+          isOpen ? "visible opacity-100 bg-white" : "invisible opacity-0"
         }`}
       >
-        <div className="flex h-full flex-col p-6">
+        <div className="flex h-full bg-white flex-col p-6">
           <div className="mb-8 flex items-center justify-between">
             <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
 
@@ -113,7 +115,8 @@ const Navbar = () => {
             <h3 className="mt-2 text-2xl font-semibold text-zinc-950">
               Premium living in Bengaluru
             </h3>
-          </div>
+          </div>Bengaluru
+
 
           <ul className="space-y-2">
             {[...links, { label: "Contact Us", href: "#contact-us" }].map(

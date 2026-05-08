@@ -28,7 +28,7 @@ const Videos = () => {
     >
       <div className="absolute left-0 top-0 h-[440px] w-[440px] rounded-full bg-[#FD9A00]/10 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <div className="relative z-10 mx-auto grid max-w-7xl px-4 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div>
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FD9A00]/20 bg-[#FD9A00]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
             <Film size={14} />

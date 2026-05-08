@@ -8,6 +8,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { openLeadForm } = useLeadForm();
 
+  const footerLinks = [
+  { label: "Overview", href: "#overview" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Amenities", href: "#amenities" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Location", href: "#location" },
+];
+
   return (
     <footer className="bg-zinc-900 text-white pt-12 md:pt-20 pb-10">
       <div className="container mx-auto px-4">
@@ -26,12 +34,17 @@ const Footer = () => {
           <div>
             <h3 className="text-base font-bold mb-5 md:mb-6 uppercase tracking-widest text-amber-500">Quick Links</h3>
             <ul className="space-y-4">
-              <li><a href="#overview" className="text-white hover:text-white transition-colors">Overview</a></li>
-              <li><a href="#amenities" className="text-white hover:text-white transition-colors">Amenities</a></li>
-              <li><a href="#gallery" className="text-white hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#floorplan" className="text-white hover:text-white transition-colors">Floor Plan</a></li>
-              <li><a href="#location" className="text-white hover:text-white transition-colors">Location</a></li>
-            </ul>
+  {footerLinks.map((item, index) => (
+    <li key={index}>
+      <a
+        href={item.href}
+        className="text-white transition-colors hover:text-[#FD9A00]"
+      >
+        {item.label}
+      </a>
+    </li>
+  ))}
+</ul>
           </div>
 
           {/* Contact Info */}
@@ -42,12 +55,7 @@ const Footer = () => {
                 <MapPin className="text-amber-600 shrink-0 mt-1" size={20} />
                 <span className="text-white">Vallakkottai, Oragadam, Chennai, Tamil Nadu 602105</span>
               </li>
-              <li className="flex items-center space-x-4">
-                <Phone className="text-amber-600 shrink-0" size={20} />
-                <button type="button" onClick={openLeadForm} className="text-white hover:text-white transition-colors text-left">
-                  +91 12345 67890
-                </button>
-              </li>
+              
               <li className="flex items-center space-x-4">
                 <Mail className="text-amber-600 shrink-0" size={20} />
                 <a href="mailto:info@casagrand.com" className="text-white hover:text-white transition-colors">info@casagrand.com</a>

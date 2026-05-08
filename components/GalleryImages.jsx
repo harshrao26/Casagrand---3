@@ -16,13 +16,13 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
+      className="relative  overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
     >
       {/* Background */}
       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[140px]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent,rgba(253,154,0,0.04))]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4  ">
         {/* Header */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="mb-4 inline-flex rounded-full border border-[#FD9A00]/25 bg-[#FD9A00]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
@@ -60,7 +60,7 @@ const Gallery = () => {
                 Premium Interior
               </p>
 
-              <h3 className="mt-2 max-w-xl text-2xl font-semibold leading-tight text-white md:text-4xl">
+              <h3 className="mt-2 max-w-xl text-md font-semibold leading-tight text-white md:text-xl">
                 Elegant indoor spaces crafted for modern luxury living.
               </h3>
             </div>
@@ -81,9 +81,7 @@ const Gallery = () => {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
 
-                <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/35 text-xs font-semibold text-white backdrop-blur-md">
-                  {index + 2}
-                </div>
+                
               </div>
             ))}
           </div>
@@ -105,14 +103,7 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
 
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="rounded-2xl border border-white/10 bg-black/35 p-3 backdrop-blur-md">
-                  <p className="text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
-                    Indoor View
-                  </p>
-                  <h3 className="mt-1 text-sm font-semibold text-white">
-                    Lifestyle Space {index + 1}
-                  </h3>
-                </div>
+                 
               </div>
             </div>
           ))}

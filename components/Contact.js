@@ -14,7 +14,7 @@ const Contact = () => {
       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/80 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           {/* Left Content */}
           <div className="rounded-[36px] border border-zinc-200/70 bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)] md:p-8 lg:p-10">
@@ -34,20 +34,7 @@ const Contact = () => {
             </p>
 
             <div className="mt-8 space-y-4">
-              <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[#FD9A00]/30 hover:bg-[#FD9A00]/5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#FD9A00] shadow-sm transition group-hover:bg-[#FD9A00] group-hover:text-white">
-                  <Phone size={23} />
-                </div>
-
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[2px] text-zinc-500">
-                    Call Us
-                  </p>
-                  <p className="mt-1 text-sm font-bold text-zinc-950 md:text-base">
-                    +91 123 456 7890
-                  </p>
-                </div>
-              </div>
+              
 
               <div className="group flex items-center gap-5 rounded-3xl border border-zinc-100 bg-zinc-50 p-5 transition-all duration-300 hover:border-[#FD9A00]/30 hover:bg-[#FD9A00]/5">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#FD9A00] shadow-sm transition group-hover:bg-[#FD9A00] group-hover:text-white">

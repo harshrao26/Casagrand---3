@@ -95,7 +95,7 @@ const Amenities = () => {
     >
       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[130px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <span className="mb-4 inline-flex rounded-full border border-[#FD9A00]/20 bg- [#FD9A00]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
             100+ Lifestyle Amenities

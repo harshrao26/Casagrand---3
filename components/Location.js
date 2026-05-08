@@ -26,7 +26,7 @@ const Location = () => {
       <div className="absolute left-1/2 top-0 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[140px]" />
       <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/5 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mb-10 grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[4px] text-[#FD9A00]">

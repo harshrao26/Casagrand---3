@@ -13,6 +13,7 @@ import Configuration from "@/components/Configuration";
 import GalleryImages from "@/components/GalleryImages";
 import ReviewSection from "@/components/ReviewSection";
 import PricingConfiguration from "@/components/PricingConfiguration";
+import VirtualTour360 from "@/components/VirtualTour360";
 
 export default function Home() {
   return (
@@ -30,6 +31,8 @@ export default function Home() {
 
         <Gallery />
         <GalleryImages/>
+                <VirtualTour360/>
+
         {/* <FloorPlan /> */}
         <Amenities />
 
