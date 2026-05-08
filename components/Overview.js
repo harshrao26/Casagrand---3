@@ -16,8 +16,8 @@ const Overview = () => {
   ];
 
   return (
-    <section className="section-shell bg-white overflow-hidden" id="overview">
-      <div className="container mx-auto px-4">
+    <section className="max-w-7xl mx-auto  my-30 bg-white overflow-hidden" id="overview">
+      <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row items-center content-grid">
           
           <motion.div 
@@ -57,7 +57,7 @@ const Overview = () => {
               <button
                 type="button"
                 onClick={openLeadForm}
-                className="cta-button w-full sm:w-auto transition-all shadow-xl shadow-zinc-200"
+                className="cta-button w-full sm:w-auto transition-all  "
               >
                 <Download size={20} />
                 <span>Download Brochure</span>

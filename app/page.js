@@ -10,7 +10,9 @@ import Location from "@/components/Location";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Configuration from "@/components/Configuration";
+import GalleryImages from "@/components/GalleryImages";
 import ReviewSection from "@/components/ReviewSection";
+import PricingConfiguration from "@/components/PricingConfiguration";
 
 export default function Home() {
   return (
@@ -27,11 +29,14 @@ export default function Home() {
 
 
         <Gallery />
-        <FloorPlan />
+        <GalleryImages/>
+        {/* <FloorPlan /> */}
+        <Amenities />
 
         
-        <Configuration />
-        <Amenities />
+        {/* <Configuration /> */}
+                <PricingConfiguration/>
+
         <Videos />
         <Location />
         <Contact />

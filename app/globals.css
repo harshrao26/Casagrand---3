@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-poppins);
-  --font-poppins: var(--font-poppins);
-}
+ 
 
 
 :root {
@@ -25,22 +24,12 @@ html {
 
 @layer base {
   body {
-    @apply text-sm text-[var(--primarycolor)] font-normal bg-white;
-    font-family: var(--font-poppins), sans-serif;
+      font-family: "Montserrat", sans-serif;
+
     padding-bottom: 56px;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-poppins), sans-serif;
-  }
-
-  p, li, label, input {
-    font-family: var(--font-poppins), sans-serif;
-  }
-
-  button, a {
-    font-family: var(--font-poppins), sans-serif;
-  }
+ 
 
 }
 
@@ -51,7 +40,7 @@ html {
 
 .section-title {
   color: #18181b;
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1.375rem;
   font-weight: 800;
   line-height: 1.15;
@@ -64,7 +53,7 @@ html {
 
 .section-eyebrow {
   color: var(--cta-color);
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -75,7 +64,7 @@ html {
 
 .section-copy {
   color: #52525b;
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 0.9375rem;
   line-height: 1.75;
 }
@@ -238,7 +227,7 @@ html {
   gap: 0.625rem;
   min-height: 3rem;
   padding: 0.875rem 1.25rem !important;
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 0.875rem !important;
   font-weight: 700 !important;
   line-height: 1.2;

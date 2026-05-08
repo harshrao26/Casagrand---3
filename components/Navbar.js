@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
-import { useLeadForm } from './LeadFormContext';
+import React, { useEffect, useState } from "react";
+import { Menu, X, Phone, Home, MapPin } from "lucide-react";
+import { useLeadForm } from "./LeadFormContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,115 +10,135 @@ const Navbar = () => {
   const { openLeadForm } = useLeadForm();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const links = [
+    { label: "Overview", href: "#overview" },
+    { label: "Communities", href: "#communities" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Floor Plan", href: "#floorplan" },
+    { label: "Location", href: "#location" },
+  ];
+
+  const closeMenu = () => setIsOpen(false);
+
   const openMobileLeadForm = () => {
-    setIsOpen(false);
+    closeMenu();
     openLeadForm();
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-white/20 backdrop-blur shadow-lg py-3'}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          
-          {/* Mobile Logo */}
-          <div className="lg:hidden">
-            <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
+    <nav
+      className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${
+        scrolled
+          ? "border-zinc-200 bg-white/95 py-3 shadow-sm backdrop-blur-xl"
+          : "border-white/30 bg-white/80 py-4 backdrop-blur-xl"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+        <a href="#" className="flex items-center gap-3">
+          <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
+
+           
+        </a>
+
+        <ul className="hidden items-center gap-1 rounded-full bg-zinc-100 p-1 lg:flex">
+          {links.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FD9A00] hover:shadow-sm"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden items-center gap-3 lg:flex">
+          <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
+            <MapPin size={15} className="text-[#FD9A00]" />
+            Bengaluru
           </div>
 
-          {/* Desktop Left Menu */}
-          <ul className={`hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
-            <li><a href="#overview" className="hover:text-amber-500 transition-colors">Overview</a></li>
-            <li><a href="#communities" className="hover:text-amber-500 transition-colors">Communities</a></li>
-            <li><a href="#gallery" className="hover:text-amber-500 transition-colors">Gallery</a></li>
-          </ul>
-
-          {/* Centered Desktop Logo */}
-          <div className="hidden lg:block">
-            <img 
-              src="/assets/cg_logo.png" 
-              alt="Casagrand" 
-              className={`h-12 transition-all duration-300 ${scrolled ? 'scale-90 brightness-100' : ''}`} 
-            />
-          </div>
-
-          {/* Desktop Right Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <ul className={`flex items-center space-x-8 text-xs font-bold uppercase tracking-widest ${scrolled ? 'text-zinc-900' : 'text-zinc-900'}`}>
-              <li><a href="#floorplan" className="hover:text-amber-500 transition-colors">Floor Plan</a></li>
-              <li><a href="#location" className="hover:text-amber-500 transition-colors">Location</a></li>
-              <li><a href="#contact-us" className="hover:text-amber-500 transition-colors">Contact</a></li>
-            </ul>
-            <button
-              type="button"
-              onClick={openLeadForm}
-              className="cta-button cta-pill transition-all"
-            >
-              <Phone size={16} />
-              <span>Call Now</span>
-            </button>
-          </div>
-
-          <div className="mt-auto flex lg:hidden">
-            <button
-              type="button"
-              onClick={openMobileLeadForm}
-              className="cta-button animate-blink w-full"
-            >
-              <Phone size={20} />
-              <span>Book Site Visit</span>
-            </button>
-<button className="lg:hidden p-2 text-zinc-900" onClick={toggleMenu}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          <button
+            type="button"
+            onClick={openLeadForm}
+            className="inline-flex items-center gap-2 rounded-full bg-[#FD9A00] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
+          >
+            <Phone size={16} />
+            Call Now
           </button>
-
-          </div>
-
-          {/* Mobile Toggle */}
-          
         </div>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 lg:hidden"
+        >
+          <Menu size={22} />
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white h-screen z-[100000000000] transition-transform duration-500 lg:hidden overflow-hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: "url('/assets/clubhouse_banner.webp')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white/85" />
-        <div className="relative flex flex-col h-full px-8 py-6">
-          <div className="flex justify-between items-center mb-10">
+      <div
+        className={`fixed inset-0 z-[999] bg-[#faf7f1] transition-opacity duration-300 lg:hidden ${
+          isOpen ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+      >
+        <div className="flex h-full flex-col p-6">
+          <div className="mb-8 flex items-center justify-between">
             <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
-            <button onClick={toggleMenu} className="w-10 h-10 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center shadow-sm">
+
+            <button
+              type="button"
+              onClick={closeMenu}
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-zinc-900 shadow-sm"
+            >
               <X size={22} />
             </button>
           </div>
-          <ul className="flex flex-col space-y-5 text-lg font-semibold text-zinc-900">
-            <li><a href="#overview" onClick={toggleMenu}>Overview</a></li>
-            <li><a href="#communities" onClick={toggleMenu}>Communities</a></li>
-            <li><a href="#gallery" onClick={toggleMenu}>Gallery</a></li>
-            <li><a href="#floorplan" onClick={toggleMenu}>Floor Plan</a></li>
-            <li><a href="#location" onClick={toggleMenu}>Location</a></li>
-            <li><a href="#contact-us" onClick={toggleMenu}>Contact Us</a></li>
-          </ul>
-          <div className="mt-auto">
-            <button
-              type="button"
-              onClick={openMobileLeadForm}
-              className="cta-button w-full"
-            >
-              <Phone size={20} />
-              <span>Book Site Visit</span>
-            </button>
+
+          <div className="mb-8 rounded-[32px] bg-white p-5 shadow-sm">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FD9A00]/10 text-[#FD9A00]">
+              <Home size={22} />
+            </div>
+
+            <p className="text-xs font-bold uppercase tracking-[2px] text-[#FD9A00]">
+              Casagrand Casablanca
+            </p>
+
+            <h3 className="mt-2 text-2xl font-semibold text-zinc-950">
+              Premium living in Bengaluru
+            </h3>
           </div>
-          
+
+          <ul className="space-y-2">
+            {[...links, { label: "Contact Us", href: "#contact-us" }].map(
+              (link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="block rounded-2xl bg-white px-5 py-4 text-lg font-semibold text-zinc-950 shadow-sm"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
+
+          <button
+            type="button"
+            onClick={openMobileLeadForm}
+            className="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FD9A00] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-black"
+          >
+            <Phone size={18} />
+            Book Site Visit
+          </button>
         </div>
       </div>
     </nav>

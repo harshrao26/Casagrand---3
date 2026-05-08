@@ -1,12 +1,12 @@
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import MobileActions from "@/components/MobileActions";
 import { LeadFormProvider } from "@/components/LeadFormContext";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -27,9 +27,8 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-poppins">
+     >
+      <body className="min-h-full flex flex-col font-montserrat">
         <LeadFormProvider>
           {children}
           <MobileActions />
