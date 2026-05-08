@@ -12,6 +12,8 @@ const Hero = () => {
   const router = useRouter();
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+  const consentId = "lead-consent-hero";
+  const [isAgreed, setIsAgreed] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -52,7 +54,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[72vh] w-full overflow-hidden pt-20 md:h-[90vh]">
+    <section className="relative min-h-[72vh]  w-full overflow-hidden pt-20 md:h-[90vh]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
@@ -122,6 +124,22 @@ const Hero = () => {
               {status === "submitting" ? "Submitting..." : "Enquire Now"}
             </button>
           </form>
+
+          <div className="flex items-start gap-3 justify-center mt-1">
+            <input
+              type="checkbox"
+              id={consentId}
+              className="mt-1 accent-[var(--accent)]"
+              defaultChecked
+            />
+            <label htmlFor={consentId} className="text-xs leading-relaxed text-zinc-500">
+              I agree to the{" "}
+              <a href="https://www.casagrand.co.in/new-privacy-policy/" className="font-bold text-zinc-900 hover:underline">
+                Privacy Policy
+              </a>{" "}
+              and authorize Casagrand to contact me.
+            </label>
+          </div>
           {message ? (
             <p className={`mt-3 text-center text-xs font-semibold ${status === "error" ? "text-red-600" : "text-green-700"}`}>
               {message}

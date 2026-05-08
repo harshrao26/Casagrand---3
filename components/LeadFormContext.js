@@ -120,7 +120,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         />
         <label htmlFor={consentId} className="text-xs leading-relaxed text-zinc-500">
           I agree to the{" "}
-          <a href="#" className="font-bold text-zinc-900 hover:underline">
+          <a href="https://www.casagrand.co.in/new-privacy-policy/" className="font-bold text-zinc-900 hover:underline">
             Privacy Policy
           </a>{" "}
           and authorize Casagrand to contact me.
