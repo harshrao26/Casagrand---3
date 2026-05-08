@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 const REQUIRED_FIELDS = ["name", "mobile", "email"];
+const MOBILE_REGEX = /^(?:\+91[\s-]?)?[6-9]\d{9}$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export async function POST(request) {
   try {
@@ -25,6 +27,20 @@ export async function POST(request) {
     if (missingField) {
       return NextResponse.json(
         { ok: false, error: `${missingField} is required.` },
+        { status: 400 }
+      );
+    }
+
+    if (!MOBILE_REGEX.test(lead.mobile)) {
+      return NextResponse.json(
+        { ok: false, error: "Enter a valid Indian mobile number." },
+        { status: 400 }
+      );
+    }
+
+    if (!EMAIL_REGEX.test(lead.email)) {
+      return NextResponse.json(
+        { ok: false, error: "Enter a valid email address." },
         { status: 400 }
       );
     }

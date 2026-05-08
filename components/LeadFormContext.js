@@ -5,6 +5,8 @@ import { Mail, Phone, Send, User, X, MapPin } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const LeadFormContext = createContext(null);
+const MOBILE_PATTERN = "(?:\\+91[\\s-]?)?[6-9][0-9]{9}";
+const EMAIL_PATTERN = "[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}";
 
 export const useLeadForm = () => {
   const context = useContext(LeadFormContext);
@@ -84,6 +86,9 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         <input
           type="tel"
           name="mobile"
+          pattern={MOBILE_PATTERN}
+          title="Enter a valid Indian mobile number."
+          inputMode="tel"
           placeholder="Phone Number"
           className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
           required
@@ -98,6 +103,8 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         <input
           type="email"
           name="email"
+          pattern={EMAIL_PATTERN}
+          title="Enter a valid email address."
           placeholder="Email Address"
           className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
           required

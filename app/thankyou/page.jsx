@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, Home, Phone, ArrowRight } from "lucide-react";
+import { CheckCircle2, Home } from "lucide-react";
 import Link from "next/link";
 
 const ThankYouPage = () => {

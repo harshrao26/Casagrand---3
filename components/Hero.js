@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { Phone, Mail, User, Send } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+const MOBILE_PATTERN = "(?:\\+91[\\s-]?)?[6-9][0-9]{9}";
+const EMAIL_PATTERN = "[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}";
+
 const Hero = () => {
   const router = useRouter();
   const [status, setStatus] = useState("idle");
@@ -86,6 +89,9 @@ const Hero = () => {
               <input
                 type="tel"
                 name="mobile"
+                pattern={MOBILE_PATTERN}
+                title="Enter a valid Indian mobile number."
+                inputMode="tel"
                 placeholder="Mobile Number"
                 className="w-full bg-transparent text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
                 required
@@ -98,6 +104,8 @@ const Hero = () => {
               <input
                 type="email"
                 name="email"
+                pattern={EMAIL_PATTERN}
+                title="Enter a valid email address."
                 placeholder="Email Address"
                 className="w-full bg-transparent text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
                 required
