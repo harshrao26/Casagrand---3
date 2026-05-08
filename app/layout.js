@@ -1,6 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-
+import MobileActions from "@/components/MobileActions";
 import { LeadFormProvider } from "@/components/LeadFormContext";
 
 const montserrat = Montserrat({
@@ -8,6 +8,8 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
+
+
 
 export const metadata = {
   title: "Casagrand Casablanca | Dubai Lifestyle Homes in Kogilu, North Bangalore",
@@ -27,11 +29,12 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-     >
+      className={`${montserrat.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-montserrat">
         <LeadFormProvider>
           {children}
-
+          <MobileActions isHome={true} />
         </LeadFormProvider>
       </body>
     </html>
