@@ -7,18 +7,18 @@ import { LeadFormFields } from "./LeadFormContext";
 const Contact = () => {
   return (
     <section
-      className="relative overflow-hidden bg-[#faf7f1] px-4 py-16 md:py-24"
+      className="relative overflow-hidden md:px-4 bg-[#faf7f1] bg-white py-16 md:py-24"
       id="contact-us"
     >
       {/* Background Effects */}
-      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[130px]" />
+      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full md:bg-[#FCB33A]/10 bg-white blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/80 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
+      <div className="relative z-10 mx-auto max-w-7xl ">
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           {/* Left Content */}
           <div className="rounded-[36px] border border-zinc-200/70 bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)] md:p-8 lg:p-10">
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
+            <span className="mb-5 md:inline-flex hidden px-4  items-center gap-2 rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10  py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
               <CalendarCheck size={14} />
               Schedule Site Visit
             </span>
@@ -73,12 +73,12 @@ const Contact = () => {
             <div className="absolute -inset-4 rounded-[44px] bg-[#FCB33A]/10 blur-2xl" />
 
             <div className="relative rounded-[36px] border border-zinc-200/70 bg-white p-6 text-zinc-950 shadow-[0_30px_100px_rgba(0,0,0,0.12)] md:rounded-[44px] md:p-8 lg:p-10">
-              <div className="mb-7 text-center md:text-left">
-                <span className="mb-4 inline-flex rounded-full bg-zinc-100 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-zinc-700">
+              <div className="mb-7 text-center md:text-left ">
+                <span className="mb-4  px-4 md:inline-flex hidden rounded-full bg-zinc-100  py-2 text-xs font-semibold uppercase tracking-[2px] text-zinc-700">
                   Enquiry Form
                 </span>
 
-                <h3 className="text-2xl font-bold leading-tight text-zinc-950 md:text-3xl">
+                <h3 className="text-2xl  font-bold leading-tight text-zinc-950 md:text-3xl">
                   Plan a Visit
                 </h3>
 
