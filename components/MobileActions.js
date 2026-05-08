@@ -29,9 +29,9 @@ const MobileActions = () => {
   </span>
 </button>
 
-        <button
-          type="button"
-          onClick={openLeadForm}
+       <button
+  type="button"
+  onClick={openLeadForm}
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#280E38] px-4 py-3 text-sm font-bold uppercase tracking-[1px] text-white transition active:scale-95"
         >
           <MessageSquare size={18} />

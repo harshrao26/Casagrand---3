@@ -61,7 +61,7 @@ const Contact = () => {
                     Location
                   </p>
                   <p className="mt-1 text-sm font-bold text-zinc-950 md:text-base">
-                    Kanakapura Road, Bengaluru
+                    Holiday Village Rd, Vakil Garden City, Mallasandra, Karnataka 560109
                   </p>
                 </div>
               </div>
