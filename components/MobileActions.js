@@ -2,10 +2,14 @@
 
 import React from "react";
 import { Phone, MessageSquare } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useLeadForm } from "./LeadFormContext";
 
 const MobileActions = () => {
   const { openLeadForm } = useLeadForm();
+  const pathname = usePathname();
+
+  if (pathname === "/thankyou") return null;
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-zinc-200 bg-white/90 px-4 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.12)] backdrop-blur-xl md: ">
