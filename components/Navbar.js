@@ -11,13 +11,24 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const links = [
     { label: "Overview", href: "#overview" },
-     { label: "Gallery", href: "#gallery" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Amenities", href: "#amenities" },
     { label: "Pricing", href: "#pricing" },
     { label: "Location", href: "#location" },
@@ -35,22 +46,22 @@ const Navbar = () => {
       className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
           ? "border-zinc-200 bg-white/95 py-3 shadow-sm backdrop-blur-xl"
-          : "border-white/30 bg-white/80 py-4 backdrop-blur-xl"
+          : "border-zinc-200 bg-white/90 py-4 backdrop-blur-xl"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+        {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
-
-           
         </a>
 
+        {/* Desktop Links */}
         <ul className="hidden items-center gap-1 rounded-full bg-zinc-100 p-1 lg:flex">
           {links.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FD9A00] hover:shadow-sm"
+                className="block rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:bg-white hover:text-[#FCB33A] hover:shadow-sm"
               >
                 {link.label}
               </a>
@@ -58,10 +69,16 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <div className="flex items-center gap-2 text-xs font-semibold text-zinc-600">
-            <MapPin size={15} className="text-[#FD9A00]" />
-            <a target="blank" href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed">
+            <MapPin size={15} className="text-[#FCB33A]" />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+              className="transition hover:text-[#FCB33A]"
+            >
               Bengaluru
             </a>
           </div>
@@ -69,75 +86,106 @@ const Navbar = () => {
           <button
             type="button"
             onClick={openLeadForm}
-            className="inline-flex items-center gap-2 rounded-full bg-[#FD9A00] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-5 py-3 text-sm font-bold text-black transition hover:bg-zinc-950 hover:text-white"
           >
             <Phone size={16} />
             Call Now
           </button>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setIsOpen(true)}
+          aria-label="Open menu"
           className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 lg:hidden"
         >
           <Menu size={22} />
         </button>
       </div>
 
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-[999] bg-[#faf7f1] transition-opacity duration-300 lg:hidden ${
-          isOpen ? "visible opacity-100 bg-white" : "invisible opacity-0"
+        className={`fixed inset-0 z-[1000000000000000] overflow-y-auto bg-white transition-all duration-300 lg:hidden ${
+          isOpen
+            ? "visible translate-x-0 opacity-100"
+            : "invisible translate-x-full opacity-0"
         }`}
       >
-        <div className="flex h-full bg-white flex-col p-6">
-          <div className="mb-8 flex items-center justify-between">
+        <div className="relative flex min-h-dvh flex-col overflow-hidden bg-white p-6">
+          {/* Soft Background Effects */}
+          <div className="pointer-events-none absolute -right-24 top-16 h-72 w-72 rounded-full bg-[#FCB33A]/15 blur-[90px]" />
+          <div className="pointer-events-none absolute -left-24 bottom-28 h-72 w-72 rounded-full bg-zinc-200/60 blur-[90px]" />
+
+          {/* Top Bar */}
+          <div className="relative z-10 mb-8 flex items-center justify-between">
             <img src="/assets/cg_logo.png" alt="Casagrand" className="h-10" />
 
             <button
               type="button"
               onClick={closeMenu}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-zinc-900 shadow-sm"
+              aria-label="Close menu"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-950 shadow-sm transition hover:bg-[#FCB33A] hover:text-black"
             >
-              <X size={22} />
+              <X size={24} />
             </button>
           </div>
 
-          <div className="mb-8 rounded-[32px] bg-white p-5 shadow-sm">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FD9A00]/10 text-[#FD9A00]">
-              <Home size={22} />
+          {/* Project Card */}
+          <div className="relative z-10 mb-8 overflow-hidden rounded-[32px] border border-zinc-200 bg-white p-5 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
+            <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[#FCB33A]/15 blur-2xl" />
+
+            <div className="relative z-10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FCB33A]/15 text-[#FCB33A]">
+                <Home size={22} />
+              </div>
+
+              <p className="text-xs font-bold uppercase tracking-[2px] text-[#FCB33A]">
+                Casagrand Casablanca
+              </p>
+
+              <h3 className="mt-2 text-2xl font-semibold leading-tight text-zinc-950">
+                Premium living in Bengaluru
+              </h3>
+
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps?cid=8194377754012098570&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+                className="mt-4 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-bold uppercase tracking-[1.5px] text-zinc-700 transition hover:border-[#FCB33A]/40 hover:bg-[#FCB33A]/10 hover:text-[#FCB33A]"
+              >
+                <MapPin size={14} className="text-[#FCB33A]" />
+                Bengaluru
+              </a>
             </div>
+          </div>
 
-            <p className="text-xs font-bold uppercase tracking-[2px] text-[#FD9A00]">
-              Casagrand Casablanca
-            </p>
-
-            <h3 className="mt-2 text-2xl font-semibold text-zinc-950">
-              Premium living in Bengaluru
-            </h3>
-          </div>Bengaluru
-
-
-          <ul className="space-y-2">
+          {/* Mobile Links */}
+          <ul className="relative z-10 space-y-3">
             {[...links, { label: "Contact Us", href: "#contact-us" }].map(
               (link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
                     onClick={closeMenu}
-                    className="block rounded-2xl bg-white px-5 py-4 text-lg font-semibold text-zinc-950 shadow-sm"
+                    className="group flex items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-lg font-semibold text-zinc-950 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition hover:border-[#FCB33A]/50 hover:bg-[#FCB33A] hover:text-black"
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-sm text-zinc-700 transition group-hover:bg-black group-hover:text-white">
+                      →
+                    </span>
                   </a>
                 </li>
               )
             )}
           </ul>
 
+          {/* Mobile CTA */}
           <button
             type="button"
             onClick={openMobileLeadForm}
-            className="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FD9A00] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-black"
+            className="relative z-10 mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-black shadow-[0_18px_50px_rgba(252,179,58,0.25)] transition active:scale-95"
           >
             <Phone size={18} />
             Book Site Visit

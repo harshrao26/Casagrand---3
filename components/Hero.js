@@ -3,8 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, User, Send } from "lucide-react";
+import { useLeadForm } from "./LeadFormContext";
 
 const Hero = () => {
+  const { openLeadForm } = useLeadForm();
+
   return (
     <section className="relative min-h-[72vh] w-full overflow-hidden pt-20 md:h-[90vh]">
       {/* Background Image */}
@@ -24,10 +27,10 @@ const Hero = () => {
       {/* Bottom Horizontal Form */}
       <div className="absolute inset-x-0 bottom-0 z-20 px-4 pb-5 md:pb-8">
         <div className="mx-auto max-w-4xl rounded-[28px] border border-white/20 bg-white/95 p-4 shadow-[0_24px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl md:rounded-full md:p-3">
-          <form className="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-center">
+          <div className="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-center">
             {/* Name */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <User className="h-5 w-5 shrink-0 text-[#FD9A00]" />
+              <User className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="text"
                 placeholder="Your Name"
@@ -37,7 +40,7 @@ const Hero = () => {
 
             {/* Mobile */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <Phone className="h-5 w-5 shrink-0 text-[#FD9A00]" />
+              <Phone className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="tel"
                 placeholder="Mobile Number"
@@ -47,7 +50,7 @@ const Hero = () => {
 
             {/* Email */}
             <div className="flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-3">
-              <Mail className="h-5 w-5 shrink-0 text-[#FD9A00]" />
+              <Mail className="h-5 w-5 shrink-0 text-[#FCB33A]" />
               <input
                 type="email"
                 placeholder="Email Address"
@@ -57,13 +60,14 @@ const Hero = () => {
 
             {/* Button */}
             <button
-              type="submit"
-              className="flex items-center justify-center gap-2 rounded-full bg-[#FD9A00] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-black transition hover:bg-zinc-950 hover:text-white"
+              type="button"
+              onClick={openLeadForm}
+              className="flex items-center justify-center gap-2 rounded-full bg-[#FCB33A] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-black transition hover:bg-zinc-950 hover:text-white"
             >
               <Send className="h-4 w-4" />
               Enquire Now
             </button>
-          </form>
+          </div>
         </div>
       </div>
 

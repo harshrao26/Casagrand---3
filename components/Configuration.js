@@ -13,7 +13,7 @@ const Configuration = () => {
       id="configuration"
     >
       {/* Background Effects */}
-      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[130px]" />
+      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[320px] w-[320px] rounded-full bg-white/5 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -22,7 +22,7 @@ const Configuration = () => {
           
 
           <h2 className="section-title section-title-on-dark">
-            Plot Sizes & <span className="text-[#FD9A00]">Pricing</span>
+            Plot Sizes & <span className="text-[#FCB33A]">Pricing</span>
           </h2>
 
           <p className="section-copy-on-dark mx-auto mt-4 max-w-2xl">
@@ -57,7 +57,7 @@ const Configuration = () => {
               <p className="mb-2 text-xs font-medium uppercase tracking-[2px] text-gray-400">
                 Starting Price
               </p>
-              <h3 className="text-xl font-bold text-[#FD9A00] md:text-2xl">
+              <h3 className="text-xl font-bold text-[#FCB33A] md:text-2xl">
                 ₹ 44 Lacs*
               </h3>
             </div>
@@ -95,7 +95,7 @@ const Configuration = () => {
                     </td>
 
                     <td className="p-6 text-center">
-                      <span className="inline-flex items-center justify-center rounded-full border border-[#FD9A00]/25 bg-[#FD9A00]/10 px-5 py-2 text-base font-bold text-[#FD9A00]">
+                      <span className="inline-flex items-center justify-center rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-5 py-2 text-base font-bold text-[#FCB33A]">
                         {config.price}
                       </span>
                     </td>
@@ -121,7 +121,7 @@ const Configuration = () => {
                 </h3>
 
                 <div className="mt-4">
-                  <span className="inline-flex items-center justify-center rounded-full border border-[#FD9A00]/25 bg-[#FD9A00]/10 px-5 py-2 text-base font-bold text-[#FD9A00]">
+                  <span className="inline-flex items-center justify-center rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-5 py-2 text-base font-bold text-[#FCB33A]">
                     {config.price}
                   </span>
                 </div>

@@ -59,7 +59,7 @@ const Overview = () => {
               <h3 className="section-title mb-7">
                 Roman-Inspired Luxury Living <br />
                 at{" "}
-                <span className="text-[#FD9A00] text-outline">
+                <span className="text-[#FCB33A] text-outline">
                   Casagrand Casablanca.
                 </span>
               </h3>
@@ -92,7 +92,7 @@ const Overview = () => {
                   className="flex items-start gap-3 rounded-2xl border border-zinc-100 bg-zinc-50 p-4"
                 >
                   <CheckCircle2
-                    className="mt-0.5 shrink-0 text-[#FD9A00]"
+                    className="mt-0.5 shrink-0 text-[#FCB33A]"
                     size={20}
                   />
                   <span className="text-sm font-semibold leading-6 text-zinc-800">
@@ -128,7 +128,7 @@ const Overview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
           >
-            <div className="absolute -inset-4 rounded-[40px] bg-[#FD9A00]/10 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[40px] bg-[#FCB33A]/10 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-[36px] border border-zinc-100 bg-white p-3  -[0_30px_100px_rgba(0,0,0,0.12)]">
               <img

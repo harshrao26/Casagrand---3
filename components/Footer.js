@@ -38,7 +38,7 @@ const Footer = () => {
     <li key={index}>
       <a
         href={item.href}
-        className="text-white transition-colors hover:text-[#FD9A00]"
+        className="text-white transition-colors hover:text-[#FCB33A]"
       >
         {item.label}
       </a>

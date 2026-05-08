@@ -76,7 +76,7 @@ const PricingConfiguration = () => {
     return (
       <div className="mb-12 md:mb-16">
         <div className="mb-6 flex items-center justify-center">
-          <h3 className="rounded-full border border-[#FD9A00]/20 bg-[#FD9A00]/10 px-6 py-3 text-center text-lg font-bold tracking-wide text-white md:text-2xl">
+          <h3 className="rounded-full border border-[#FCB33A]/20 bg-[#FCB33A]/10 px-6 py-3 text-center text-lg font-bold tracking-wide text-white md:text-2xl">
             {title}
           </h3>
         </div>
@@ -85,20 +85,20 @@ const PricingConfiguration = () => {
         <div className="hidden overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] shadow-[0_30px_100px_rgba(0,0,0,0.45)] backdrop-blur-xl md:block">
           <table className="w-full border-collapse text-center">
             <thead>
-              <tr className="bg-[#FD9A00]/10">
-                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FD9A00]">
+              <tr className="bg-[#FCB33A]/10">
+                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FCB33A]">
                   BHK
                 </th>
-                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FD9A00]">
+                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FCB33A]">
                   Unit Type
                 </th>
-                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FD9A00]">
+                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FCB33A]">
                   Built-up Area
                 </th>
-                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FD9A00]">
+                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FCB33A]">
                   Price Per Sq. Ft.
                 </th>
-                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FD9A00]">
+                <th className="border border-white/10 px-5 py-5 text-sm font-extrabold uppercase tracking-[3px] text-[#FCB33A]">
                   Price Range
                 </th>
               </tr>
@@ -108,7 +108,7 @@ const PricingConfiguration = () => {
               {data.map((item, index) => (
                 <tr
                   key={index}
-                  className="transition duration-300 hover:bg-[#FD9A00]/10"
+                  className="transition duration-300 hover:bg-[#FCB33A]/10"
                 >
                   <td className="border border-white/10 px-5 py-5 text-base font-semibold text-white">
                     {item.bhk}
@@ -150,7 +150,7 @@ const PricingConfiguration = () => {
             >
               <div className="mb-4 flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#FD9A00]">
+                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#FCB33A]">
                     Configuration
                   </p>
 
@@ -163,7 +163,7 @@ const PricingConfiguration = () => {
                   className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[1.5px] ${
                     item.range === "Sold Out"
                       ? "bg-red-500/10 text-red-400"
-                      : "bg-[#FD9A00]/15 text-[#FD9A00]"
+                      : "bg-[#FCB33A]/15 text-[#FCB33A]"
                   }`}
                 >
                   {item.range === "Sold Out" ? "Sold Out" : "Available"}
@@ -204,7 +204,7 @@ const PricingConfiguration = () => {
                     className={`text-right font-bold ${
                       item.range === "Sold Out"
                         ? "text-red-400"
-                        : "text-[#FD9A00]"
+                        : "text-[#FCB33A]"
                     }`}
                   >
                     {item.range}
@@ -223,18 +223,18 @@ const PricingConfiguration = () => {
       id="pricing"
       className="relative overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
     >
-      <div className="absolute left-1/2 top-0 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[150px]" />
+      <div className="absolute left-1/2 top-0 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[150px]" />
       <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-white/5 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span className="mb-4 inline-flex rounded-full border border-[#FD9A00]/25 bg-[#FD9A00]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
+          <span className="mb-4 inline-flex rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
             Apartments Price Details
           </span>
 
           <h2 className="section-title section-title-on-dark">
             Configuration &{" "}
-            <span className="text-[#FD9A00]">Pricing</span>
+            <span className="text-[#FCB33A]">Pricing</span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400 md:text-base">

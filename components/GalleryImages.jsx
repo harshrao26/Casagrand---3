@@ -19,18 +19,18 @@ const Gallery = () => {
       className="relative  overflow-hidden bg-[#0c0c0c] px-4 py-16 md:py-24"
     >
       {/* Background */}
-      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FD9A00]/10 blur-[140px]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent,rgba(253,154,0,0.04))]" />
+      <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#FCB33A]/10 blur-[140px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent,rgba(252,179,58,0.04))]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4  ">
         {/* Header */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span className="mb-4 inline-flex rounded-full border border-[#FD9A00]/25 bg-[#FD9A00]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FD9A00]">
+          <span className="mb-4 inline-flex rounded-full border border-[#FCB33A]/25 bg-[#FCB33A]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#FCB33A]">
             Indoor Gallery
           </span>
 
           <h2 className="section-title section-title-on-dark">
-            Designed Spaces, <span className="text-[#FD9A00]">Captured</span>
+            Designed Spaces, <span className="text-[#FCB33A]">Captured</span>
           </h2>
 
           <p className="section-copy-on-dark mx-auto mt-4 max-w-2xl">
@@ -56,7 +56,7 @@ const Gallery = () => {
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[2px] text-[#FD9A00]">
+              <p className="text-sm font-semibold uppercase tracking-[2px] text-[#FCB33A]">
                 Premium Interior
               </p>
 
@@ -122,7 +122,7 @@ const Gallery = () => {
 
           <a
             href="#contact"
-            className="mt-5 inline-flex rounded-full bg-[#FD9A00] px-7 py-3 text-sm font-semibold text-black transition hover:bg-white"
+            className="mt-5 inline-flex rounded-full bg-[#FCB33A] px-7 py-3 text-sm font-semibold text-black transition hover:bg-white"
           >
             Enquire Now
           </a>

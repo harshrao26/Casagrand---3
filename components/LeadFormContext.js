@@ -16,9 +16,45 @@ export const useLeadForm = () => {
 };
 
 export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
-  const handleSubmit = (event) => {
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    onSubmit?.();
+    setStatus("submitting");
+    setMessage("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      mobile: String(formData.get("mobile") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+    };
+
+    try {
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "Unable to submit inquiry.");
+      }
+
+      form.reset();
+      setStatus("success");
+      setMessage("Thank you. Our team will contact you shortly.");
+      onSubmit?.();
+    } catch (error) {
+      setStatus("error");
+      setMessage(error.message || "Unable to submit inquiry. Please try again.");
+    }
   };
 
   return (
@@ -30,8 +66,9 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         />
         <input
           type="text"
+          name="name"
           placeholder="Your Name"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FD9A00] focus:bg-white focus:ring-4 focus:ring-[#FD9A00]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
           required
         />
       </div>
@@ -43,8 +80,9 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         />
         <input
           type="tel"
+          name="mobile"
           placeholder="Phone Number"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FD9A00] focus:bg-white focus:ring-4 focus:ring-[#FD9A00]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
           required
         />
       </div>
@@ -56,8 +94,9 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         />
         <input
           type="email"
+          name="email"
           placeholder="Email Address"
-          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FD9A00] focus:bg-white focus:ring-4 focus:ring-[#FD9A00]/10"
+          className="w-full rounded-2xl border border-zinc-200 bg-zinc-50 py-3.5 pl-12 pr-5 text-zinc-900 outline-none transition focus:border-[#FCB33A] focus:bg-white focus:ring-4 focus:ring-[#FCB33A]/10"
           required
         />
       </div>
@@ -66,7 +105,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
         <input
           type="checkbox"
           id={consentId}
-          className="mt-1 accent-[#FD9A00]"
+          className="mt-1 accent-[#FCB33A]"
           defaultChecked
         />
         <label htmlFor={consentId} className="text-xs leading-relaxed text-zinc-500">
@@ -80,14 +119,21 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
 
       <button
         type="submit"
-        className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-zinc-950 px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[#FD9A00] hover:text-black"
+        disabled={status === "submitting"}
+        className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-zinc-950 px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[#FCB33A] hover:text-black"
       >
-        <span>Submit Inquiry</span>
+        <span>{status === "submitting" ? "Submitting..." : "Submit Inquiry"}</span>
         <Send
           size={18}
           className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
         />
       </button>
+
+      {message ? (
+        <p className={`text-center text-xs font-semibold ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+          {message}
+        </p>
+      ) : null}
     </form>
   );
 };
@@ -113,12 +159,12 @@ const LeadFormModal = ({ isOpen, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent" />
 
           <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#FD9A00] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-black">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#FCB33A] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-black">
               <MapPin size={14} />
               Kanakapura Road
             </p>
 
-            <h3 className="text-4xl font-bold leading-tight">
+            <h3 className="text-xl md:text-3xl font-bold leading-tight">
               Visit Casagrand Casablanca
             </h3>
 
@@ -140,11 +186,11 @@ const LeadFormModal = ({ isOpen, onClose }) => {
           </button>
 
           <div className="mb-7 pr-12">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#FD9A00]">
+            <p className="text-xs font-bold uppercase tracking-[3px] text-[#FCB33A]">
               Casagrand Casablanca
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-zinc-950 md:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-zinc-950 md:text-3xl">
               Book Your Site Visit
             </h2>
 
