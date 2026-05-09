@@ -66,7 +66,7 @@ const Location = () => {
                   <p className="text-xs font-semibold uppercase tracking-[3px] text-[var(--accent)]">
                     Project Location
                   </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
+                  <h3 className="mt-2 md:text-2xl font-semibold text-white">
                     Casagrand Casablanca
                   </h3>
                 </div>
