@@ -118,7 +118,7 @@ const Hero = () => {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-bold uppercase tracking-[1px] text-white transition hover:bg-[var(--accent-hover)]"
+              className="flex items-center justify-center gap-1.5 rounded-full bg-[var(--accent)] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.5px] text-white transition hover:bg-[var(--accent-hover)] md:gap-2 md:px-7 md:py-3.5 md:text-sm md:tracking-[1px]"
             >
               <Send className="h-4 w-4" />
               {status === "submitting" ? "Submitting..." : "Enquire Now"}

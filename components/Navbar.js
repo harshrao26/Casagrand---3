@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Menu, X, Phone, Home, MapPin } from "lucide-react";
+import { Menu, X, Phone, Home, MapPin, MessageSquare } from "lucide-react";
 import { useLeadForm } from "./LeadFormContext";
 
 const Navbar = () => {
@@ -89,8 +89,8 @@ const Navbar = () => {
               onClick={openLeadForm}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--accent-hover)]"
             >
-              <Phone size={16} />
-              Request A Call
+              <MessageSquare size={16} />
+              Get A Quote
             </button>
           </div>
 
@@ -160,7 +160,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={openMobileLeadForm}
-            className="relative z-10 mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white shadow-[0_18px_50px_rgba(168,117,34,0.25)] transition active:scale-95"
+            className="relative z-10 mt-8 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[var(--accent)] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.5px] text-white shadow-[0_18px_50px_rgba(168,117,34,0.25)] transition active:scale-95"
           >
             <Phone size={18} />
             Book Site Visit

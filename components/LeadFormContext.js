@@ -130,7 +130,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--accent)] px-6 py-4 text-sm font-bold uppercase tracking-[1.5px] text-white transition hover:bg-[var(--accent-hover)]"
+        className="group flex w-full items-center justify-center gap-1.5 rounded-2xl bg-[var(--accent)] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.5px] text-white transition hover:bg-[var(--accent-hover)] md:gap-2 md:px-6 md:py-4 md:text-sm md:tracking-[1.5px]"
       >
         <span>{status === "submitting" ? "Submitting..." : "Submit Inquiry"}</span>
         <Send
