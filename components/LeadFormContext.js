@@ -34,6 +34,7 @@ export const LeadFormFields = ({ consentId = "lead-consent", onSubmit }) => {
       name: String(formData.get("name") || "").trim(),
       mobile: String(formData.get("mobile") || "").trim(),
       email: String(formData.get("email") || "").trim(),
+      pageUrl: window.location.href,
     };
 
     try {

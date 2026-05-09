@@ -26,6 +26,7 @@ const Hero = () => {
       name: String(formData.get("name") || "").trim(),
       mobile: String(formData.get("mobile") || "").trim(),
       email: String(formData.get("email") || "").trim(),
+      pageUrl: window.location.href,
     };
 
     try {

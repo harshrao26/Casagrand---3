@@ -20,6 +20,7 @@ export async function POST(request) {
       name: String(body.name || "").trim(),
       mobile: String(body.mobile || "").trim(),
       email: String(body.email || "").trim(),
+      pageUrl: String(body.pageUrl || "").trim(),
     };
 
     const missingField = REQUIRED_FIELDS.find((field) => !lead[field]);
