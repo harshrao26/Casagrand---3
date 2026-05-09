@@ -14,6 +14,7 @@ import GalleryImages from "@/components/GalleryImages";
 import ReviewSection from "@/components/ReviewSection";
 import PricingConfiguration from "@/components/PricingConfiguration";
 import VirtualTour360 from "@/components/VirtualTour360";
+import MobileForm from "@/components/MobileForm";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <main className="flex-1">
         <Navbar />
         <Hero />
+        <MobileForm />
                 {/* <ReviewSection /> */}
 
         <Overview />
