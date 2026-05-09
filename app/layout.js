@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 
 export const metadata = {
-  title: "Casagrand Casablanca | Dubai Lifestyle Homes in Kogilu, North Bangalore",
+  title: "Roman-Inspired Luxury Living at Casagrand Casablanca, Kanakapura Road, Bengaluru",
   description: "Experience the pinnacle of luxury with Casagrand Casablanca in Kogilu, North Bangalore. Offering premium 2, 3 & 4 BHK apartments inspired by Dubai's iconic architecture.",
   icons: {
     icon: [
