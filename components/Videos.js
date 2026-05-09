@@ -60,7 +60,7 @@ const Videos = () => {
               key={index}
               type="button"
               onClick={() => setActiveTab(index)}
-              className={`group rounded-3xl border p-5 text-left transition-all ${
+              className={`group rounded-3xl border md:p-5 p-2 text-left transition-all ${
                 activeTab === index
                   ? "border-[var(--accent)]/40 bg-[var(--accent)]/10"
                   : "border-zinc-100 bg-white hover:border-[var(--accent)]/30"
